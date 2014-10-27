@@ -1,0 +1,5 @@
+../default/public/ng/lib/angular.min.js:211: WARNING - If this if/for/while really shouldnt have a body, use {}
+x;s++)for(a=z[s],p=1,w=a.length;p<w;p++){if((h=a[p].element)[0].selected){h=h.val();n&&(d[n]=h);if(u)for(y=0;y<c.length&&(d[m]=c[y],u(e,d)!=h);y++);else d[m]=c[h];l.push(r(e,d))}}else if(h=f.val(),"?"==h)l=t;else if(""===h)l=null;else if(u)for(y=0;y<c.length;y++){if(d[m]=c[y],u(e,d)==h){l=r(e,d);break}}else d[m]=c[h],n&&(d[n]=h),l=r(e,d);g.$setViewValue(l);k()})});g.$render=k;e.$watchCollection(v,k);q&&e.$watchCollection(function(){return g.$modelValue},k)}if(m[1]){var p=m[0];m=m[1];var q=k.multiple,
+                                                                                                                                                   ^
+
+0 error(s), 1 warning(s)

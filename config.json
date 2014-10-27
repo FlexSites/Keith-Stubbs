@@ -1,0 +1,7 @@
+{
+	"title": "Utah Based Comedian Keith Stubbs",
+	"host": "keithstubbs.com",
+	"analytics": "UA-45478831-1",
+	"styles": ["/css/global.css", "http://fonts.googleapis.com/css?family=Pacifico"],
+	"scripts": ["/ng/global.js"]
+}

@@ -1,0 +1,16 @@
+<section class="grid-6 mr">
+
+    <?php
+    if (file_exists('php/cache/blog/' . $b . '.php')) {
+	include('php/cache/blog/' . $b . '.php');
+    } else {
+	include('php/page/error404.php');
+    }
+    ?>
+
+</section>
+<div class="fl" style="position: relative;">
+<section class="affix grid-3 blue bs r">
+    <?php include("php/sidebar.php"); ?>
+</section>
+</div>

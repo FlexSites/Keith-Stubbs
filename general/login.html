@@ -1,0 +1,21 @@
+{{>head}}
+{{>header}}
+
+<h1>Login</h1>
+<form method="post">
+    <label for="username">
+        <input type="text" name="username" id="username" placeholder="Username">
+        <span></span>
+    </label>
+    <label for="password">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <span></span>
+    </label>
+    <div class="buttons">
+        <button type="submit">Login</button>
+    </div>
+</form>
+<a href="/auth/google" class="btn orange grid-full">Login with Google</a>
+
+{{>footer}}
+{{>foot}}

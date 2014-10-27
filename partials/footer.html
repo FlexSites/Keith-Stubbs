@@ -1,0 +1,31 @@
+<footer id="footer">
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">Bio</a>
+         <a href="mailto:laughstv&#64;aol.com?subject=KeithStubbs.com Booking" target="_blank" class="contact-link">Hire Keith</a>
+        <a href="/videos">Videos</a>
+        <a href="http://stubbscast.com/" target="_blank">StubbsCast</a>
+    </div>
+</footer>
+
+<script>
+    $(function(){
+        $('body').on('click.youtube','a.video',function(){
+            var url = $(this).attr('href');
+            load(['/js/fancybox.js','/css/fancybox.css'],function(){
+                $.fancybox.open({
+                    href:'http://www.youtube.com/v/'+url.match(/(\?v=|\/\d\/|\/embed\/|\/v\/|\.be\/)([a-zA-Z0-9\-\_]+)/)[2]+'?autohide=1&autoplay=1&modestbranding=1&rel=0&theme=light&version=3',
+                    type:'iframe',
+                    scrolling:'no',
+                    width:650,
+                    height:360
+                });
+            });
+            return false;
+        });
+        $('img[data-src]').each(function(){
+            $(this).attr('src',$(this).attr('data-src'));
+        });
+    });
+
+</script>
