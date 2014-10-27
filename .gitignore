@@ -1,6 +1,9 @@
 *.ts
 *.zip
-dwsync.xml
 *.psd
 *.tif
+public/index.html
+public/ng/*.js
+public/css/*
+dwsync.xml
 build.json
