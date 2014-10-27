@@ -10,5 +10,8 @@
         "dest": "/videos",
         "type": "permanent"
     }],
+    "contact": {
+        "email": "laughstv@aol.com"
+    },
     "analytics": "UA-45478831-1"
 }

@@ -1,47 +1,49 @@
-<style>
-    form {
-        width: 100%;
-    }
-    label {
-        width: calc(50% - 20px);
-        display: block;
-        float: left;
-        margin: 10px;
-        font-weight: bold;
-    }
-    label > input, label > textarea {
-        width: 100%;
-        padding: 8px;
-        font-weight: bold;
-    }
-    :not(:focus).ng-dirty.ng-invalid {
-        border-color: #f00;
-    }
-    label.full {
-        width: calc(100% - 20px);
-    }
-    #bodyContent > .p {
-        padding: 5%;
-    }
-    button {
-        margin: 10px;
-        border: 0;
-        background-color: #f90;
-        color: #fff;
-        font-size: 1.07142857em;
-        line-height: 2.28571429em;
-        position: relative;
-        display: inline-block;
-        padding: 0 0.57142857em;
-        text-decoration: none;
-        cursor: pointer;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        outline: none;
-        -webkit-font-smoothing: antialiased;
-        border-bottom: none !important;
-    }
-</style>
+<section>
+<div>
+    <style>
+        form {
+            width: 100%;
+        }
+        label {
+            width: calc(50% - 20px);
+            display: block;
+            float: left;
+            margin: 10px;
+            font-weight: bold;
+        }
+        label > input, label > textarea {
+            width: 100%;
+            padding: 8px;
+            font-weight: bold;
+        }
+        :not(:focus).ng-dirty.ng-invalid {
+            border-color: #f00;
+        }
+        label.full {
+            width: calc(100% - 20px);
+        }
+        #bodyContent > .p {
+            padding: 5%;
+        }
+        button {
+            margin: 10px;
+            border: 0;
+            background-color: #f90;
+            color: #fff;
+            font-size: 1.07142857em;
+            line-height: 2.28571429em;
+            position: relative;
+            display: inline-block;
+            padding: 0 0.57142857em;
+            text-decoration: none;
+            cursor: pointer;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            outline: none;
+            -webkit-font-smoothing: antialiased;
+            border-bottom: none !important;
+        }
+    </style>
     <form name="contactForm" class="mainBG p mb fl" ng-controller="ContactForm as form" ng-submit="contactForm.$valid && saveData()" novalidate>
         <h1>Book Me!</h1>
         <div ng-show="!form.submitted">
@@ -86,3 +88,5 @@
             <div class="text box">Message: {{form.message}}</div>
         </div>
     </form>
+    </div>
+</section>
