@@ -1,4 +1,4 @@
-var app = angular.module('comedian', ['ngRoute'])
+var app = angular.module('app', ['ngRoute'])
     .config(['$routeProvider', '$locationProvider',
         function($routeProvider, $locationProvider) {
             angular.forEach(<@&routes@>, function(route) {

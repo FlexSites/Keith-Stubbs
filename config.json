@@ -1,9 +1,9 @@
 {
     "host": "keithstubbs.com",
     "title": "Utah Based Comedian Keith Stubbs",
-    "description": "Steve Soelberg is well-known as the voice of Ragnar. He's also an incredibly talented stand-up comedian.",
+    "description": "Keith Stubbs is a professional, experienced stand up comedian since 1991.  Keith has performed for many corporations, companies and various groups.  He's funny, experienced and professional. Keith Stubbs. Comedian for Hire.",
     "type": "entertainer",
-    "styles": ["/css/global.css", "http://fonts.googleapis.com/css?family=Pacifico"],
+    "styles": ["/css/style.css", "http://fonts.googleapis.com/css?family=Pacifico"],
     "scripts": ["/ng/global.js"],
     "redirects": [{
         "src": "/media",
@@ -11,7 +11,7 @@
         "type": "permanent"
     }],
     "contact": {
-        "email": "laughstv@aol.com"
+        "email": "keithstubbscomedian@gmail.com"
     },
     "analytics": "UA-45478831-1"
 }
