@@ -1,92 +1,84 @@
-<section>
-<div>
-    <style>
-        form {
-            width: 100%;
-        }
-        label {
-            width: calc(50% - 20px);
-            display: block;
-            float: left;
-            margin: 10px;
-            font-weight: bold;
-        }
-        label > input, label > textarea {
-            width: 100%;
-            padding: 8px;
-            font-weight: bold;
-        }
-        :not(:focus).ng-dirty.ng-invalid {
-            border-color: #f00;
-        }
-        label.full {
-            width: calc(100% - 20px);
-        }
-        #bodyContent > .p {
-            padding: 5%;
-        }
-        button {
-            margin: 10px;
-            border: 0;
-            background-color: #f90;
-            color: #fff;
-            font-size: 1.07142857em;
-            line-height: 2.28571429em;
-            position: relative;
-            display: inline-block;
-            padding: 0 0.57142857em;
-            text-decoration: none;
-            cursor: pointer;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            outline: none;
-            -webkit-font-smoothing: antialiased;
-            border-bottom: none !important;
-        }
-    </style>
-    <form name="contactForm" class="mainBG p mb fl" ng-controller="ContactForm as form" ng-submit="contactForm.$valid && saveData()" novalidate>
-        <h1>Book Me!</h1>
-        <div ng-show="!form.submitted">
-            <label for="name" class="full">
-                Name:
-                <input type="text" ng-model="contact.name" required>
-            </label>
-            <label for="phone">
-                Phone:
-                <input type="tel" ng-model="contact.phone" required>
-            </label>
-            <label for="email">
-                Email:
-                <input type="email" ng-model="contact.email" required>
-            </label>
-            <label for="message" class="full">
-                Message:
-                <textarea ng-model="contact.message"></textarea>
-            </label>
-            <button type="submit">Submit</button>
+<section class="p3x white">
+    <div>
+        <h1>Contact Keith!</h1>
+        <div class="grid-half">
+            <h4>Phone</h4>
+            <h3>801.xxx.xxxx</h3>
+            <h4>Email</h4>
+            <h3>laughstv@aol.com</h3>
         </div>
-        <div ng-show="form.submitted">
-            <div class="text box">Message: {{form.message}}</div>
-        </div>
-    </form>
-
-
-    <form name="subscribeForm" class="mainBG p fl" ng-controller="EmailList as form" ng-submit="subscribeForm.$valid && saveData()">
-        <h1>Join My Email List!</h1>
+        <form name="contactForm" class="mainBG p mb fl grid-half" ng-controller="ContactForm as form" ng-submit="contactForm.$valid && saveData()" novalidate>
+            
             <div ng-show="!form.submitted">
-            <label for="name" class="full">
-                Name:
-                <input type="text" name="name" ng-model="subscriber.name" required>
-            </label>
-            <label for="email" class="full">
-                Email:
-                <input type="email" name="email" ng-model="subscriber.email" required>
-            </label>
-            <button type="submit">Submit</button>
-        </div>
-        <div ng-show="form.submitted">
-            <div class="text box">Message: {{form.message}}</div>
-        </div>
-    </form>
+                <label for="name" class="full">
+                    Name:
+                    <input type="text" ng-model="contact.name" required>
+                </label>
+                <label for="phone">
+                    Phone:
+                    <input type="tel" ng-model="contact.phone" required>
+                </label>
+                <label for="email">
+                    Email:
+                    <input type="email" ng-model="contact.email" required>
+                </label>
+                <label for="message" class="full">
+                    Message:
+                    <textarea ng-model="contact.message"></textarea>
+                </label>
+                <button type="submit" class="btn green">Send Message</button>
+            </div>
+            <div ng-show="form.submitted">
+                <div class="text box">Message: {{form.message}}</div>
+            </div>
+        </form>
     </div>
 </section>
+<style>
+    form {
+        width: 100%;
+    }
+    label {
+        width: calc(50% - 20px);
+        display: block;
+        float: left;
+        margin: 10px;
+        font-weight: bold;
+    }
+    label > input, label > textarea {
+        width: 100%;
+        padding: 8px;
+        font-weight: bold;
+    }
+    :not(:focus).ng-dirty.ng-invalid {
+        border-color: #f00;
+    }
+    label.full {
+        width: calc(100% - 20px);
+    }
+    #bodyContent > .p {
+        padding: 5%;
+    }
+    button {
+        margin: 10px;
+        border: 0;
+        background-color: #f90;
+        color: #fff;
+        font-size: 1.07142857em;
+        line-height: 2.28571429em;
+        position: relative;
+        display: inline-block;
+        padding: 0 0.57142857em;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        outline: none;
+        -webkit-font-smoothing: antialiased;
+        border-bottom: none !important;
+    }
+    .grid-half {
+        width: 50%;
+        float: left;
+    }
+</style>
