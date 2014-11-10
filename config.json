@@ -3,7 +3,7 @@
     "title": "Utah Based Comedian Keith Stubbs",
     "description": "Keith Stubbs is a professional, experienced stand up comedian since 1991.  Keith has performed for many corporations, companies and various groups.  He's funny, experienced and professional. Keith Stubbs. Comedian for Hire.",
     "type": "entertainer",
-    "styles": ["/css/style.css", "http://fonts.googleapis.com/css?family=Pacifico"],
+    "styles": ["/css/style.css", "http://fonts.googleapis.com/css?family=Fjalla+One"],
     "scripts": ["/ng/global.js"],
     "redirects": [{
         "src": "/media",
