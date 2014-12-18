@@ -1,7 +1,7 @@
 var app = angular.module('app', ['ngRoute'])
     .config(['$routeProvider', '$locationProvider',
         function($routeProvider, $locationProvider) {
-            angular.forEach(<@&routes@>, function(route) {
+            angular.forEach(<<&routes>>, function(route) {
                 var url = route.url;
                 delete route.url;
                 $routeProvider.when(url, route);
@@ -20,7 +20,7 @@ var app = angular.module('app', ['ngRoute'])
     .controller('MediaController', ['$scope','$http',
         function($scope,$http) {
             console.log('Media Controller');
-            $http.get('http://<@env@>api.comedian.io/media').success(function(data) {
+            $http.get('http://<<env>>api.comedian.io/media').success(function(data) {
                 console.log('success', arguments);
                 $scope.items = data;
             }).error(function() {
@@ -30,7 +30,7 @@ var app = angular.module('app', ['ngRoute'])
     ])
     .controller('EmailList', ['$scope', '$http',
         function($scope, $http) {
-            $http.get('http://<@env@>api.comedian.io/events').success(function() {
+            $http.get('http://<<env>>api.comedian.io/events').success(function() {
                 console.log('Success', arguments);
             }).error(function() {
                 console.log('Failure', arguments);
@@ -44,7 +44,7 @@ var app = angular.module('app', ['ngRoute'])
             this.submitted = false;
             $scope.saveData = function() {
                 console.log('Hey', this.subscriber);
-                $http.post('http://<@env@>api.comedian.io/subscribers', $scope.subscriber)
+                $http.post('http://<<env>>api.comedian.io/subscribers', $scope.subscriber)
                     .success(function(data) {
                         that.submitted = true;
                         that.message = data.message;
@@ -63,7 +63,7 @@ var app = angular.module('app', ['ngRoute'])
             this.submitted = false;
             var that = this;
             $scope.saveData = function() {
-                $http.post('http://<@env@>api.comedian.io/mail/send', $scope.contact)
+                $http.post('http://<<env>>api.comedian.io/mail/send', $scope.contact)
                     .success(function(data) {
                         that.submitted = true;
                         that.message = data.message;
