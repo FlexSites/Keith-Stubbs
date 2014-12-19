@@ -1,4 +1,4 @@
-<section class="p3x white">
+<section id="contact" class="p3x white clearfix">
     <div>
         <h1>Contact Keith!</h1>
         <div class="grid-half">
@@ -7,19 +7,20 @@
             <h4>Email</h4>
             <h3>laughstv&#64;aol.com</h3>
         </div>
-        <form name="contactForm" class="mainBG p mb fl grid-half" ng-controller="ContactForm as form" ng-submit="contactForm.$valid && saveData()" novalidate>
-            
-            <div ng-show="!form.submitted">
+        <form name="contactForm" class="mainBG p mb fl grid-half" ng-controller="MessageController" ng-submit="contactForm.$valid && saveData()" novalidate>
+            <b>* Required field</b>
+            <div style="background: #fcc; color: #000; padding: 10px;" ng-show="!contactForm.$valid">Please enter all required fields</div>
+            <div ng-show="!submitted">
                 <label for="name" class="full">
-                    Name:
+                    * Name:
                     <input type="text" ng-model="contact.name" required>
                 </label>
                 <label for="phone">
                     Phone:
-                    <input type="tel" ng-model="contact.phone" required>
+                    <input type="tel" ng-model="contact.phone">
                 </label>
                 <label for="email">
-                    Email:
+                    * Email:
                     <input type="email" ng-model="contact.email" required>
                 </label>
                 <label for="message" class="full">
@@ -28,7 +29,7 @@
                 </label>
                 <button type="submit" class="btn green">Send Message</button>
             </div>
-            <div ng-show="form.submitted">
+            <div ng-show="submitted">
                 <div class="text box">Message: {{form.message}}</div>
             </div>
         </form>
