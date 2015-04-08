@@ -5,7 +5,8 @@ angular.module('app')
     // $locationProvider.hashPrefix('!');
     $routeProvider
       .when('/', {
-        templateUrl: '/html/home.html'
+        templateUrl: '/html/home.html',
+        controller: 'HomeCtrl'
       })
       .when('/bio', {
         templateUrl: '/html/bio.html',
