@@ -1,5 +1,8 @@
 {
   "name": "comedian",
+  "data": {
+    "entertainerId": "55232c9258a27692c55b64b3"
+  },
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,6 +16,7 @@
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "^0.6.1",
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-awspublish": "^1.0.6"
   }
 }
