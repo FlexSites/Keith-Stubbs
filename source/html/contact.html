@@ -6,30 +6,79 @@
     <h4>Email</h4>
     <h3><<contact.email>></h3>
   </div>
-  <form name="contactForm" class="mainBG p mb fl grid-half" ng-controller="MessageController" ng-submit="contactForm.$valid && saveData()" novalidate>
+  <div class="grid-half">
     <b>* Required field</b>
-    <div style="background: #fcc; color: #000; padding: 10px;" ng-show="!contactForm.$valid">Please enter all required fields</div>
+    <div id='requiredMessage' style="background: #fcc; color: #000; padding: 10px; display: none" >Please enter all required fields</div>
     <div ng-show="!submitted">
       <label for="name" class="full">
         * Name:
-        <input type="text" ng-model="contact.name" required>
+        <input type="text" id="name" required>
       </label>
       <label for="phone">
         Phone:
-        <input type="tel" ng-model="contact.phone">
+        <input type="tel" id="phone">
       </label>
       <label for="email">
         * Email:
-        <input type="email" ng-model="contact.email" required>
+        <input type="email" id="email" required>
       </label>
       <label for="message" class="full">
         Message:
-        <textarea ng-model="contact.message"></textarea>
+        <textarea id="message"></textarea>
       </label>
-      <button type="submit" class="btn green">Send Message</button>
+      <button type="button" id='sendButton' class="btn green">Send Message</button>
     </div>
-    <div ng-show="submitted">
-      <div class="text box">Message: {{form.message}}</div>
+    <div id='messageConfirm'>
     </div>
-  </form>
+  </div>
 </section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+  $('#sendButton').on('click', function(){
+    var name2 = $('#name').val();
+    var phone2 = $('#phone').val();
+    var email2 = $('#email').val();
+    var message2 = $('#message').val();
+    var valid = true;
+    var re = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    if ($.trim(message2).length === 0) {
+      valid = false;
+      $('#message').css('background-color','#fcc');
+      $('#requiredMessage').show();
+      $("#message").focus();
+    }
+    if (!re.test(email2)) {
+      valid = false;
+      $('#email').css('background-color','#fcc');
+      $('#requiredMessage').show();
+      $("#email").focus();
+    }
+    if ($.trim(name2).length === 0) {
+      valid = false;
+      $('#name').css('background-color','#fcc');
+      $('#requiredMessage').show();
+      $("#name").focus();
+    }
+
+    if(valid){
+      $('#name').removeAttr('style');
+      $('#email').removeAttr('style');
+      $('#message').removeAttr('style');
+      $('#requiredMessage').hide();
+      $.ajax({
+        url: 'http://localapi.flexhub.io/contactMessages',
+        dataType: 'json',
+        method: 'POST',
+        data: {name: name2, phone:phone2, email:email2,message:message2},
+        success: function(data) {
+          console.log('data' + data)
+          $('#name').val('')
+          $('#email').val('')
+          $('#phone').val('')
+          $('#message').val('')
+          $('#messageConfirm').html("Successfully sent message!")
+        }
+      });
+    }
+  })
+</script>
