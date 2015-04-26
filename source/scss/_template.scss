@@ -569,3 +569,12 @@ button:after, .btn:after {
 .icon-flickr:before {
   content: "\e028";
 }
+
+.errorMessage {
+  background-color: #fcc;
+  padding: 10px;
+}
+
+.hide {
+  display: none;
+}
