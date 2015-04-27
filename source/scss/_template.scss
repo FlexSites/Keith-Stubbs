@@ -319,7 +319,7 @@ a:hover {
   float: right;
 }
 
-.c, .clearfix, section > div {
+.c, .clearfix {
   clear: both !important;
 }
 
@@ -568,4 +568,30 @@ button:after, .btn:after {
 
 .icon-flickr:before {
   content: "\e028";
+}
+
+.errorMessage {
+  background-color: #fcc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.successMessage {
+  background-color: limegreen;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.backgroundRed {
+  background-color: #fcc;
+}
+
+.hide {
+  display: none;
+}
+
+input, textarea {
+  border-width: 2px;
+  border-color: #ccc;
+  border-style: solid;
 }
