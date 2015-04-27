@@ -1,10 +1,10 @@
 <section class="full-bar">
   <h1>Contact Keith!</h1>
   <div class="grid-half">
-    <h4>Phone</h4>
-    <h3><<contact.phone>></h3>
-    <h4>Email</h4>
-    <h3><<contact.email>></h3>
+    <h3>Phone</h3>
+    <h2><<contact.phone>></h2>
+    <h3>Email</h3>
+    <h2><<contact.email>></h2>
   </div>
   <div class="grid-half">
     <div id="messageForm">
@@ -12,25 +12,25 @@
         <b>* Required field</b>
       </div>
       <div id="requiredMessage" class="errorMessage hide" >Please enter all required fields</div>
-      <label for="name" class="full">
+      <label for="name" class="grid-full">
         * Name:
-        <input type="text" style="backgroundColor: #fccc" id="name" required>
+        <input type="text" id="name" required>
       </label>
-      <label for="phone">
-        Phone:
-        <input type="tel" id="phone">
-      </label>
-      <label for="email">
+      <label for="email" class="grid-half">
         * Email:
         <input type="email" id="email" required>
       </label>
-      <label for="message" class="full">
+      <label for="phone" class="grid-half">
+        Phone:
+        <input type="tel" id="phone">
+      </label>
+      <label for="message" class="grid-full">
         Message:
         <textarea id="message"></textarea>
       </label>
       <button type="button" id='sendButton' class="btn green">Send Message</button>
     </div>
-    <div id="messageConfirm">
+    <div id="messageConfirm" class="successMessage hide">
     </div>
   </div>
 </section>

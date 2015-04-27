@@ -8,19 +8,19 @@
     var re = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     if ($.trim(message2).length === 0) {
       valid = false;
-      $('#message').css('background-color','#fcc');
+      $('#message').addClass('backgroundRed');
       $('#requiredMessage').show();
       $("#message").focus();
     }
     if (!re.test(email2)) {
       valid = false;
-      $('#email').css('background-color','#fcc');
+      $('#email').addClass('backgroundRed');
       $('#requiredMessage').show();
       $("#email").focus();
     }
     if ($.trim(name2).length === 0) {
       valid = false;
-      $('#name').css('background-color','#fcc');
+      $('#name').addClass('backgroundRed');
       $('#requiredMessage').show();
       $("#name").focus();
     }
@@ -36,6 +36,7 @@
           console.log('data' + data)
           $('#messageForm').hide()
           $('#messageConfirm').html("Thanks! Your message is on it's way!")
+          $('#messageConfirm').show()
         }
       });
     }
