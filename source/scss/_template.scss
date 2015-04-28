@@ -77,7 +77,7 @@ a:hover {
 
 body {
   padding: 0;
-  margin: 80px 0 0;
+  margin: 100px 0 0;
 }
 
 .header {
@@ -339,7 +339,7 @@ a:hover {
   display: table;
 }
 
-button{
+button, .btn{
   background: $color-primary;
   color: #fff;
   border-radius: $radius;
@@ -351,6 +351,8 @@ button{
   cursor: pointer;
   &:hover{
     background: $color-primary-dk;
+    text-decoration: none;
+    color: #fff;
   }
 }
 
