@@ -1,42 +1,33 @@
-<style>
-  #messageForm{
-    background-color: #e8e8e8;
-    border-radius: 3px;
-    padding: 10px 20px;
-  }
-  .no-pt{
-    padding-top: 5px;
-  }
-</style>
-<section class="full-bar contact-container">
-  <h1 class="grid-full mt2x ml">Contact Keith!</h1>
-  <hr/>
-  <div class="grid-14">
-      <div id="requiredMessage" class="grid-full errorMessage hide">Please enter all required fields</div>
-      <label for="name" class="grid-full no-pt">
-        Name: <span>*Required</span>
-        <input type="text" id="name" required>
-      </label>
-      <label for="email" class="grid-half">
-        Email: <span>*Required</span>
-        <input type="email" id="email" required>
-      </label>
-      <label for="phone" class="grid-half">
-        Phone:
-        <input type="tel" id="phone">
-      </label>
-      <label for="message" class="grid-full">
-        Message: <span>*Required</span>
-        <textarea id="message" required></textarea>
-      </label>
-      <button type="button" id='sendButton' class="grid-full tr mb2x mt2x">Send Message <i class="icon-email"></i></button>
-    </div>
-    <div class="grid-6 mt2x" id="messageForm">
-      <h3>Phone</h3>
-      <h2 class="mb2x pb2x"><<contact.phone>></h2>
-      <h3>Email</h3>
-      <h2><<contact.email>></h2>
-    </div>
-    <div id="messageConfirm" class="successMessage hide">
+<section class="full-bar">
+  <div class="grid-full">
+    <h1>Contact Keith!</h1>
+  </div>
+  <form id="contact-form" class="flush-14">
+    <div id="requiredMessage" class="grid-full error-message hide">Please enter all required fields</div>
+    <label for="name" class="grid-full no-pt">
+      Name: <span>*Required</span>
+      <input type="text" id="name" required>
+    </label>
+    <label for="email" class="grid-half">
+      Email: <span>*Required</span>
+      <input type="email" id="email" required>
+    </label>
+    <label for="phone" class="grid-half">
+      Phone:
+      <input type="tel" id="phone">
+    </label>
+    <label for="message" class="grid-full">
+      Message: <span>*Required</span>
+      <textarea id="message" required></textarea>
+    </label>
+    <button class="grid-full tr mb2x mt2x">Send Message <i class="icon-email"></i></button>
+    <div id="messageConfirm" class="success-message hide"></div>
+  </form>
+  <div class="grid-6 mt2x" id="messageForm">
+    <h3>Phone</h3>
+    <h2 class="mb2x pb2x"><<contact.phone>></h2>
+    <h3>Email</h3>
+    <h2><<contact.email>></h2>
   </div>
 </section>
+

@@ -1,4 +1,5 @@
 <<>head>>
+
 <header class="header full-bar">
   <a href="/" class="header_logo">Keith Stubbs</a>
   <span class="header_social">
@@ -9,48 +10,30 @@
   <nav class="header_nav">
   	<a href="/">Home</a>
   	<a href="/bio">Bio</a>
-  	<a href="/contact" class="contact-link">Hire Keith</a>
+  	<a href="/contact">Hire Keith</a>
     <a href="/videos">Videos</a>
     <a href="/posts">Blog</a>
-  	<!-- <a href="http://stubbscast.com/" target="_blank">StubbsCast</a> -->
   	<a href="/downloads/press-kit.zip" target="_self">Press Kit</a>
-  	<!--<a href="#stubbscast">StubbsCast</a>-->
-  	<!--<a href="#emailSignup">Newsletter</a>-->
-  	<a href="/contact" class="contact-link">Contact</a>
+  	<a href="/contact">Contact</a>
   </nav>
 </header>
 
-<section class="clearfix">[[$content]]<div class="full-bar"><h1>Page not found</h1></div>[[/content]]</section>
+[[$content]]
+<section class="full-bar">
+  <h1>Page not found</h1>
+  <p>[[errorMessage]]</p>
+</section>
+[[/content]]
 
-<footer id="footer">
-    <div>
-        <a href="/">Home</a>
-        <a href="/bio">Bio</a>
-         <a href="/contact" class="contact-link">Hire Keith</a>
-        <a href="/videos">Videos</a>
-        <a href="http://stubbscast.com/" target="_blank">StubbsCast</a>
-    </div>
+<footer class="footer full-bar">
+    <a href="/">Home</a>
+    <a href="/bio">Bio</a>
+    <a href="/contact">Hire Keith</a>
+    <a href="/videos">Videos</a>
+    <a href="/posts">Blog</a>
+    <a href="/downloads/press-kit.zip" target="_self">Press Kit</a>
+    <a href="/contact">Contact</a>
+    <a href="http://stubbscast.com/" target="_blank">StubbsCast</a>
 </footer>
 
-<script>
-    // $(function(){
-    //     $('body').on('click.youtube','a.video',function(){
-    //         var url = $(this).attr('href');
-    //         load(['/js/fancybox.js','/css/fancybox.css'],function(){
-    //             $.fancybox.open({
-    //                 href:'http://www.youtube.com/v/'+url.match(/(\?v=|\/\d\/|\/embed\/|\/v\/|\.be\/)([a-zA-Z0-9\-\_]+)/)[2]+'?autohide=1&autoplay=1&modestbranding=1&rel=0&theme=light&version=3',
-    //                 type:'iframe',
-    //                 scrolling:'no',
-    //                 width:650,
-    //                 height:360
-    //             });
-    //         });
-    //         return false;
-    //     });
-    //     $('img[data-src]').each(function(){
-    //         $(this).attr('src',$(this).attr('data-src'));
-    //     });
-    // });
-
-</script>
 <<>foot>>
