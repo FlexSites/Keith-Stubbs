@@ -26,8 +26,8 @@ $(function(){
       data: JSON.stringify(form),
       success: function() {
         $requiredMessage.hide();
-        $('#messageForm').hide();
-        $('#messageConfirm').text('Thanks! Your message is on it\'s way!').show();
+        $('#contact-form').hide();
+        $('#message-confirm').text('Thanks! Your message is on it\'s way!').show();
       },
       error: function(){
         // TODO: Handle error case
