@@ -19,7 +19,7 @@ $(function(){
 
     if(!valid) return;
     $.ajax({
-      url: 'http://<<env>>api.flexhub.io/contactMessages',
+      url: 'http://v2.flexhub.io/contactMessages',
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
       method: 'POST',
