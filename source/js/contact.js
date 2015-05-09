@@ -6,12 +6,17 @@ $(function(){
 
   $('#contact-form').on('submit', function(){
     var valid = true
+      , elValid = true
       , form = ['name','phone','email','body'].reduce(function(prev, curr){
       var $el = $('#'+curr)
         , val = $.trim($el.val());
-      if(($el.attr('type') === 'email' && !isEmail.test(val)) || ($el.prop('required') && !val.length)) valid = false;
-      if(!valid){
+      if(($el.attr('type') === 'email' && !isEmail.test(val)) || ($el.prop('required') && !val.length)){
+        elValid = false;
+        valid = false;
+      }
+      if(!elValid){
         handleError($el);
+        elValid = true;
       }
       prev[curr] = val;
       return prev;
@@ -39,6 +44,7 @@ $(function(){
   function handleError($el){
     $el.addClass('background-red').focus();
     $('#requiredMessage').show();
+    event.preventDefault();
   }
 });
 
