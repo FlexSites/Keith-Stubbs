@@ -6,17 +6,12 @@ $(function(){
 
   $('#contact-form').on('submit', function(){
     var valid = true
-      , elValid = true
       , form = ['name','phone','email','body'].reduce(function(prev, curr){
       var $el = $('#'+curr)
         , val = $.trim($el.val());
       if(($el.attr('type') === 'email' && !isEmail.test(val)) || ($el.prop('required') && !val.length)){
-        elValid = false;
-        valid = false;
-      }
-      if(!elValid){
         handleError($el);
-        elValid = true;
+        valid = false;
       }
       prev[curr] = val;
       return prev;
