@@ -1,0 +1,26 @@
+
+#videos {
+  height: 680px;
+}
+.video {
+  background-position: center;
+  background-size: auto 150%;
+  display: block;
+  height: 20vh;
+  position: relative;
+  margin-bottom: 32px;
+  &-gallery {
+    white-space: collapse;
+  }
+  > span {
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    line-height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

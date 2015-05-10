@@ -1,101 +1,33 @@
 @charset "utf-8";
-/* CSS Document */
 
-body {
-  font: 20px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
+$header-height: 100px;
 
 .splash {
   display: none;
 }
 
-.textLeft {
-  text-align: left;
-}
-
-.textRight {
-  text-align: right;
-}
-
-.textCenter {
-  text-align: center;
-}
-
-.ts {
-  text-shadow: 0.07143em 0.07143em 0.07143em rgba(0, 0, 0, 0.5);
-}
-
-h1, h2, h3, h4, h5, h6, .header, .header > div > a, #workedWith td, #footer, .video > span {
+%header-font {
   font-family: "Fjalla One", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.hero {
-  height: 600px;
-  background-image: url(../img/blue-curtain.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding-top: 32px;
-  &_keith {
-    width: 420px;
-    height: 568px;
-    float: left;
-  }
-  &_content {
-    float: left;
-    width: calc(100% - 420px);
-  }
-  &_heading, &_subheading {
-    text-transform: uppercase;
-    font-family: 'Fjalla One';
-    line-height: 1em;
-  }
-  &_heading {
-    color: #fff;
-    font-size: 96px;
-    margin-bottom: 0;
-  }
-  &_subheading {
-    font-size: 34px;
-    color: #FC0;
-  }
-  &_cta {
-    color: #fff;
-    float: left;
-    margin-top: 222px;
-    margin-left: 57px;
-  }
-}
-
-.h1, h2, h3, h4, h5, h6, a {
-  color: $color-primary;
-  font-weight: normal;
-}
-
-a:hover {
-  color: $color-primary-lt;
-}
-
-body {
-  padding: 0;
-  margin: 80px 0 0;
-}
-
 .header {
+  @extend %header-font;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
   background-color: $color-primary-dk;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  padding-top: 0;
+  padding-top: 10px;
   padding-bottom: 0;
+  margin-bottom: $space * 2;
   &_logo {
     font-weight: bold;
     font-size: 3em;
     text-transform: uppercase;
     display: inline-block;
     height: 0.85em;
-    text-indent: 0.15em;
+    text-indent: $space/3;
     line-height: 1em;
     position: relative;
     z-index: -1;
@@ -110,12 +42,13 @@ body {
       background: $color-primary;
       position: fixed;
       left: 0;
-      height: 32px;
+      height: 42px;
       z-index: -1;
     }
     > a {
-      line-height: 32px;
-      padding: 0 .5em;
+      @extend %header-font;
+      line-height: 42px;
+      padding: 0 $space/2;
       display: block;
       float: left;
       font-size: 24px;
@@ -150,448 +83,24 @@ body {
   }
 }
 
-#mainNav > a:active {
-  background-color: #004688;
-  box-shadow: inset 0 -2px 0 #002466;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-#awards > div {
-  background-color: #fff;
-  background-image: url(../media/awards/uba.jpg);
-  background-repeat: no-repeat;
-  background-position: 30px 30px;
-  padding: 30px;
-  height: 260px;
-}
-
-.slideshow {
-  position: relative;
-  -webkit-animation: fadeIn 250ms linear;
-  /* Chrome, Safari 5+ */
-   > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-   > .active {
-    z-index: 9;
-    opacity: 0;
-    -webkit-animation: fadeOut 250ms linear;
-    /* Chrome, Safari 5+ */
-     + img {
-      opacity: 1;
-      z-index: 10;
-      -webkit-animation: fadeIn 250ms linear;
-      /* Chrome, Safari 5+ */
-    }
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-#workedWith {
-  border-left: solid 1px #eee;
-  width: 100%;
-  table-layout: fixed;
-}
-
-#workedWith td {
-  font-size: 22px;
-  line-height: 1.4em;
-  text-align: center;
-}
-
-#emailSignup {
-  height: 45px;
-}
-
-#contact {
-  height: 600px}
-
-#about p, #contact p {
-  text-align: justify;
-  font-size: 20px;
-  line-height: 1.4em;
-}
-
-#stubbscast {
-  height: 630px;
-  background-image: url(../media/hero/stubbscast-header.jpg);
-  background-position: center 50px;
-  background-repeat: no-repeat;
-}
-
-#videos {
-  height: 680px;
-}
-
-#footer {
+.footer {
+  @extend %header-font;
   height: 320px;
   color: #fff;
   text-align: center;
   border-top: solid 5px #118cff;
-}
-
-#footer > div {
-  padding: 30px;
-}
-
-#footer > div > a {
-  font-size: 24px;
-  padding: 30px;
-}
-
-.video {
-  background-position: center;
-  background-size: auto 150%;
-  display: block;
-  height: 20vh;
-  position: relative;
-  margin-bottom: 32px;
-  &-gallery {
-    white-space: collapse;
-  }
-  > span {
-    font-size: 16px;
-    width: 100%;
-    display: block;
-    position: absolute;
-    bottom: -32px;
-    line-height: 32px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  > a {
+    font-size: 24px;
+    padding: $space/2;
+    display: inline-block;
   }
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-.c, .clearfix {
-  clear: both !important;
-}
-
-.cl {
-  clear: left;
-}
-
-.cr {
-  clear: right;
-}
-
-.clearfix, section > div {
-  zoom: 1;
-}
-
-.clearfix:before, section > div:before, .clearfix:after, section > div:after {
-  content: "";
-  display: table;
-}
-
-button, .btn {
-  font-size: 1em;
-  line-height: 2.285714285em;
-  position: relative;
-  display: inline-block;
-  padding: 0 0.714285714em;
-  border-radius: 0.285714285em;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 5px;
-  border: none !important;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-button:after, .btn:after {
-  content: "";
-  display: block;
-  height: 2.285714285em;
-  width: 100%;
-  color: rgba(0, 0, 0, 0.75) !important;
-  left: 0;
-  top: 0;
-  border-radius: 0.285714285em;
-  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.5, rgba(255, 255, 255, 0.01)), to(rgba(0, 0, 0, 0)));
-  background: transparent -moz-linear-gradient(top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.01) 50%, transparent);
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorstr='#80FFFFFF', EndColorstr='#00FFFFFF');
-  position: absolute;
-}
-
-.noDrag {
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -ms-user-select: none;
-  user-select: none;
-  draggable: none;
-}
-
-@font-face {
-  font-family: 'Comedicon';
-  src: url("/font/comedicon/Comedicon.eot");
-  src: url("/font/comedicon/Comedicon.eot?#iefix") format("embedded-opentype"), url("/font/comedicon/Comedicon.woff") format("woff"), url("/font/comedicon/Comedicon.ttf") format("truetype"), url("/font/comedicon/Comedicon.svg#Comedicon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.icon-home:before, .icon-profile:before, .icon-ticket:before, .icon-mic:before, .icon-video:before, .icon-email:before, .icon-blog:before, .icon-check:before, .icon-cross:before, .icon-error:before, .icon-warning:before, .icon-blocked:before, .icon-retweet:before, .icon-star:before, .icon-star-half:before, .icon-star-fill:before, .icon-forward:before, .icon-back:before, .icon-prev:before, .icon-next:before, .icon-left:before, .icon-right:before, .icon-down:before, .icon-up:before, .icon-menu:before, .icon-list:before, .icon-grid:before, .icon-download:before, .icon-loading:before, .icon-facebook:before, .icon-twitter:before, .icon-google-plus:before, .icon-pinterest:before, .icon-instagram:before, .icon-link:before, .icon-html5:before, .icon-chrome:before, .icon-safari:before, .icon-firefox:before, .icon-opera:before, .icon-IE:before, .icon-flickr:before {
-  font-family: 'Comedicon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  margin-right: 0.5em;
-}
-
-.icon-home:before {
-  content: "\e000";
-}
-
-.icon-profile:before {
-  content: "\e001";
-}
-
-.icon-ticket:before {
-  content: "\e002";
-}
-
-.icon-mic:before {
-  content: "\e003";
-}
-
-.icon-video:before, .video:before {
-  content: "\e004";
-}
-
-.icon-email:before {
-  content: "\e005";
-}
-
-.icon-blog:before {
-  content: "\e006";
-}
-
-.icon-check:before {
-  content: "\e007";
-}
-
-.icon-cross:before {
-  content: "\e008";
-}
-
-.icon-error:before {
-  content: "\e009";
-}
-
-.icon-warning:before {
-  content: "\e00a";
-}
-
-.icon-blocked:before {
-  content: "\e00b";
-}
-
-.icon-retweet:before {
-  content: "\e029";
-}
-
-.icon-star:before {
-  content: "\e00c";
-}
-
-.icon-star-half:before {
-  content: "\e00d";
-}
-
-.icon-star-fill:before {
-  content: "\e00e";
-}
-
-.icon-forward:before {
-  content: "\e00f";
-}
-
-.icon-back:before {
-  content: "\e010";
-}
-
-.icon-prev:before {
-  content: "\e011";
-}
-
-.icon-next:before {
-  content: "\e012";
-}
-
-.icon-left:before {
-  content: "\e013";
-}
-
-.icon-right:before {
-  content: "\e014";
-}
-
-.icon-down:before {
-  content: "\e015";
-}
-
-.icon-up:before {
-  content: "\e016";
-}
-
-.icon-menu:before {
-  content: "\e017";
-}
-
-.icon-list:before {
-  content: "\e018";
-}
-
-.icon-grid:before {
-  content: "\e019";
-}
-
-.icon-download:before {
-  content: "\e01a";
-}
-
-.icon-loading:before {
-  content: "\e01b";
-}
-
-.icon-facebook:before {
-  content: "\e04f";
-}
-
-.icon-twitter:before {
-  content: "\e050";
-}
-
-.icon-google-plus:before {
-  content: "\e01e";
-}
-
-.icon-pinterest:before {
-  content: "\e01f";
-}
-
-.icon-instagram:before {
-  content: "\e020";
-}
-
-.icon-link:before {
-  content: "\e021";
-}
-
-.icon-html5:before {
-  content: "\e022";
-}
-
-.icon-chrome:before {
-  content: "\e023";
-}
-
-.icon-safari:before {
-  content: "\e024";
-}
-
-.icon-firefox:before {
-  content: "\e025";
-}
-
-.icon-opera:before {
-  content: "\e026";
-}
-
-.icon-IE:before {
-  content: "\e027";
-}
-
-.icon-flickr:before {
-  content: "\e028";
-}
-
-.errorMessage {
-  background-color: #fcc;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.successMessage {
-  background-color: limegreen;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.backgroundRed {
-  background-color: #fcc;
-}
-
-.hide {
-  display: none;
-}
-
-input, textarea {
-  border-width: 2px;
-  border-color: #ccc;
-  border-style: solid;
+#messageForm {
+  h3{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 25px;
+  }
 }
