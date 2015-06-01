@@ -54,6 +54,9 @@ $header-height: 100px;
       font-size: 24px;
       text-transform: uppercase;
       color: $color-white;
+      &:first-child {
+        display: none;
+      }
       &:hover, &.current {
         color: $color-white;
         background: #118cff;
@@ -102,5 +105,31 @@ $header-height: 100px;
   }
   h2{
     font-size: 25px;
+  }
+}
+
+@include mobile(){
+  body {
+    margin-top: 48px !important;
+  }
+  .header {
+    padding-top: 0;
+    height: 48px;
+    &_logo, &_social {
+      display: none;
+    }
+    &_nav {
+      a, &:after {
+        display: none;
+      }
+      a:first-child {
+        display: block;
+        line-height: 48px;
+        padding: 0 15px;
+        i:before {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
