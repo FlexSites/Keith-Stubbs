@@ -8,9 +8,9 @@
       Name: <span>*Required</span>
       <input type="text" id="name" required>
     </label>
-    <label for="email" class="grid-half">
+    <label for="fromEmail" class="grid-half">
       Email: <span>*Required</span>
-      <input type="email" id="email" required>
+      <input type="email" id="fromEmail" required>
     </label>
     <label for="phone" class="grid-half">
       Phone:
@@ -20,6 +20,8 @@
       Message: <span>*Required</span>
       <textarea id="body" required></textarea>
     </label>
+    <input type="hidden" id="type" value="contact"/>
+    <input type="hidden" id="toEmail" value="contact@keithstubbs.com"/>
     <button class="grid-full tr mb2x mt2x">Send Message <i class="icon-email"></i></button>
   </form>
   <div id="message-confirm" class="success-message flush-14 hide"></div>
