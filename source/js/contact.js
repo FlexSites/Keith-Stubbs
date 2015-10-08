@@ -6,10 +6,10 @@ $(function(){
 
   $('#contact-form').on('submit', function(){
     var valid = true
-      , form = ['name','phone','fromEmail','body','toEmail', 'type'].reduce(function(prev, curr){
+      , form = ['name','phone','email','body','type'].reduce(function(prev, curr){
       var $el = $('#'+curr)
         , val = $.trim($el.val());
-      if(($el.attr('type') === 'fromEmail' && !isEmail.test(val)) || ($el.prop('required') && !val.length)){
+      if(($el.attr('type') === 'email' && !isEmail.test(val)) || ($el.prop('required') && !val.length)){
         handleError($el);
         valid = false;
       }
