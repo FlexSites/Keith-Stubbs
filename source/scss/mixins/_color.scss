@@ -1,0 +1,35 @@
+@mixin background-color($color-name,$color-color){
+    #{$color-prefix}#{$color-name}, #{$color-prefix}#{$color-name}.fauxBar:before, #{$color-prefix}#{$color-name}.fauxBar:after {
+        @if lightness($color-color) < 60% {
+            color: $color-white !important;
+        }
+        @else {
+            color: $color-black !important;
+        }
+        background-color: $color-color !important;
+    }
+}
+@mixin gradient($color-name, $color-color1, $color-color2, $color-pre: $color-prefix){
+    #{$color-pre}#{$color-name}-grad {
+        @if lightness($color-color1) < 60% {
+            color: $color-white !important;
+        }
+        @else {
+            color: $color-black !important;
+        }
+        background-color: $color-color1;
+        background-image: -webkit-linear-gradient($color-color1,$color-color2);
+        background-image: linear-gradient($color-color1, $color-color2);
+    }
+    button, .btn {
+        &#{$color-pre}#{$color-name} {
+            background-image: -webkit-linear-gradient(rgba($color-white,0.6),rgba($color-white,0.15)), -webkit-linear-gradient($color-color1,$color-color2);
+            background-image: linear-gradient(rgba($color-white,0.6), rgba($color-white,0.15)), linear-gradient($color-color1, $color-color2);
+            background-size: 100% 50%, 100%;
+            background-repeat: repeat-x;
+        }
+    }
+}
+@mixin randomColors($color-index: 1, $color-count: 4){
+    background-color: hsl((255/$color-count) * $color-index,50%,50%);
+}

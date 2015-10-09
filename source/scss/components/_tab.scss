@@ -1,0 +1,149 @@
+/** TAB **/
+
+$tabHeaderFont: 16px;
+.tab {
+    @extend .r, .ltgray, .grid-full;
+    position:relative;
+    margin-bottom: $space;
+    &.collapse {
+        > .header {
+            @extend .r;
+            position: relative;
+            cursor: pointer;
+            &:after {
+                content: "(Show)";
+                position: absolute;
+                top: 0;
+                right: $space/2;
+                color: $color-black-light;
+                text-shadow: 1px 1px 2px #ccc;
+            }
+        }
+        > .content {
+            display: none;
+        }
+        &.open > .header {
+            @extend .rt;
+            &:after {
+                content: "(Hide)";
+            }
+        }
+    }
+    > .header, > .content {
+        @extend .clearfix;
+    }
+    > .header {
+        @extend .rt, .noDrag, .dkgray;
+        width: 100%;
+        font-size: em($tabHeaderFont);
+        line-height: emOf($verticalBlock,$tabHeaderFont);
+        color: $color-black;
+        text-indent: emOf($space,$tabHeaderFont);
+        img {
+            height: 20px;
+        }
+        > a {
+            display: block;
+            float: left;
+            padding: 0 emOf($space,$tabHeaderFont);
+            text-indent: 0;
+            margin-top: emOf($space/2,$tabHeaderFont);
+            line-height: emOf($verticalBlock - $space/2,$tabHeaderFont);
+            &:first-child {
+                margin-left: emOf($space/2,$tabHeaderFont);
+            }
+            &:hover, &.current {
+                @extend .rt;
+                box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+            }
+            &:hover {
+                background-color: rgba(0,0,0,0.15);
+            }
+            &.current {
+                background-color: $ltGray;
+            }
+        }
+    }
+    &.multitab {
+        > .content {
+            &.noChoice {
+                > a {
+                    &:first-child, &:first-child + div {
+                        display: block;
+                    }
+                }
+            }
+            > {
+                div, a {
+                    display: none;
+                }
+                a {
+                    @extend %iconAfter, .noDrag;
+                    font-size: 18px;
+                    color: $color-blue;
+                    margin: $space/2 0;
+                    &.current {
+                        &:after {
+                            content: icon('down');
+                        }
+                        + div {
+                            display: block;
+                        }
+                    }
+                    &:after {
+                        content: icon('right');
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+@include mobile(){
+    .tab {
+        background: none !important;
+        > {
+            .header {
+                background: none !important;
+                text-indent: $space/2;
+                font-weight: bold;
+                > a {
+                    display: none;
+                }
+            }
+            .content {
+                padding: 0;
+                background: none;
+                > a {
+                    float: left;
+                    width: 100%;
+                    background-color: $color-gray;
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                    padding: 10px;
+                    display: block !important;
+                    &:before {
+                        content: none;
+                    }
+                    &.current {
+                        margin-bottom: 0;
+                        + div {
+                            margin-bottom: 5px;
+                            max-height: 9999px;
+                            padding: 10px;
+                        }
+                    }
+                    + div {
+                        float: left;
+                        width: 100%;
+                        display: block;
+                        overflow: hidden;
+                        max-height: 0;
+                        padding: 0;
+                        background-color: $ltGray;
+                    }
+                }
+            }
+        }
+    }
+}

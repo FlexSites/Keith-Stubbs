@@ -1,0 +1,7 @@
+@mixin transition($duration: 500ms, $animate: 'all'){
+    -webkit-transition: unquote($animate) $duration ease-in-out;
+    -moz-transition: unquote($animate) $duration ease-in-out;
+    -o-transition: unquote($animate) $duration ease-in-out;
+    -ms-transition: unquote($animate) $duration ease-in-out;
+    transition: unquote($animate) $duration ease-in-out;
+}

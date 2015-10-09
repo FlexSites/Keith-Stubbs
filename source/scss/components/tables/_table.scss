@@ -1,0 +1,68 @@
+/** TABLES **/
+
+//To fix a specificity issue.
+.tabular {
+    @extend .grid-full;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    &.tabular {
+        background-color: $ltGray;
+        thead > tr {
+            > {
+                td, th {
+                    @extend #{$prefix}blue-grad;
+                    font-size: 16px;
+                    line-height: $verticalBlock - $space;
+                    text-indent: $space/2;
+                    border-color: darken($color-blue,10);
+                    vertical-align:bottom;
+                    text-align:center;
+                }
+            }
+        }
+        tbody > tr {
+            &:nth-child(even) {
+                background-color: $color-white;
+            }
+        }
+        tfoot {
+            border-top: solid 2px $color-gray;
+            > tr {
+                background-color: darken($color-white,5%) !important;//#f2f2f2
+            }
+        }
+        td, th {
+            border: solid 1px $color-gray;
+        }
+        &:not(.compact) {
+            td, th {
+                @extend .p;
+            }
+        }
+    }
+}
+td, th {
+    vertical-align: top;
+    padding: 0;
+    &.left {
+        @extend .tl;
+    }
+    &.right {
+        @extend .tr;
+    }
+    &.center {
+        @extend .tc;
+    }
+    button, .btn {
+        @extend .fr, .no-mb;
+        text-indent: 0;
+        line-height: 2em;
+    }
+}
+.tableBreak {
+    @extend .no-b, .no-pl;
+    background-color: $color-white;
+}

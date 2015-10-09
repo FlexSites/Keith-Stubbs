@@ -1,0 +1,10 @@
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+@function em($px) {
+    @return emOf($px,$baseFontSize);
+}
+@function emOf($px,$fontSize){
+    @return #{(strip-units($px)/strip-units($fontSize))}em;
+}

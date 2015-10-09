@@ -1,0 +1,75 @@
+
+/** Comedicon ICON FONT **/
+
+$fontName: 'Comedicon';
+$prefix: '.' !default;
+$icons: (
+"left-circle": "\e000",
+"right-circle": "\e001",
+"prev": "\e002",
+"next": "\e003", 
+"left": "\e004",
+"right": "\e005",
+"up": "\e006",
+"down": "\e007",
+"warning": "\e008",
+"plus-circle": "\e009",
+"minus-circle": "\e00a",
+"menu": "\e00b",
+"search": "\e00c",
+"star": "\e00d",
+"star-half": "\e00e",
+"star-empty": "\e00f",
+"contact": "\e010",
+"blog": "\e011",
+"directions": "\e013",
+"lock": "\e015",
+"mail": "\e018",
+"back": "\e037",
+"forward": "\e038",
+"first": "\e03c",
+"last": "\e03d",
+"heart": "\e03e",
+"cart": "\e03f",
+"print": "\e040",
+"settings": "\e041",
+"card": "\e042",
+"checkmark-circle": "\e043",
+"close-circle": "\e044",
+"checkmark": "\e045",
+"close": "\e046",
+"info": "\e047",
+"error": "\e048",
+"list": "\e049",
+"grid": "\e04a", 
+"history": "\e04b",
+"home": "\e04c",
+"facebook": "\e04f",
+"twitter": "\e050",
+"google-plus": "\e051",
+"pinterest": "\e052",
+"email": "\e053",
+"youtube": "\e054",
+"user": "\e056",
+"camera": "\e05c",
+"ticket": "\e012",
+"microphone": "\e014",
+"ban": "\e016",
+"download": "\e01a",
+"spinner": "\e01b",
+"instagram": "\e020",
+"link": "\e021",
+"popout": "\e600",
+"earth": "\e601",
+"music": "\f001",
+"calendar": "\f073");
+
+@import "../core/font";
+@include font($fontName);
+
+@import "../core/icon";
+@include icons($icons);
+
+@function comedicon($name){
+    @return quote(map-get($icons,$name));
+}

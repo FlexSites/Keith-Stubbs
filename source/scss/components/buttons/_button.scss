@@ -1,0 +1,126 @@
+/** BUTTON **/
+
+button, .btn {
+    @extend .bs;
+    @extend .no-b;
+    @extend .r;
+    @extend .tc;
+    @extend .hideOnPrint;
+    @extend .mb;
+    @extend .noDrag;
+    @extend %bold !optional;
+    font-size: $baseFontSize;
+    background-color: $color-primary;
+    @if lightness($color-primary) > 50% {
+        color: $color-black !important;
+    }
+    @else {
+        color: $color-white !important;
+    }
+    line-height: $input-height;
+    position: relative;
+    display: inline-block;
+    padding: 0 $input-height/3;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    &.loading, &.loading:hover {
+        &:after {
+            @extend .r;
+            content: "";
+            display: block;
+            height: $input-height;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: default;
+            -webkit-animation: stripes 500ms linear infinite;
+            animation: stripes 500ms linear infinite;
+            background-image: -webkit-linear-gradient(45deg, rgba($color-white, 0.3) 25%, transparent 25%,
+                transparent 50%, rgba($color-white, 0.3) 50%, rgba($color-white, 0.3) 75%,
+                transparent 75%, transparent);
+            background-image: linear-gradient(45deg, rgba($color-white, 0.3) 25%, transparent 25%,
+                transparent 50%, rgba($color-white, 0.3) 50%, rgba($color-white, 0.3) 75%,
+                transparent 75%, transparent);
+            background-size: $input-height $input-height;
+            background-repeat: repeat-x;
+        }
+    }
+    &:hover {
+        opacity: 0.9;
+        color: $color-white;
+    }
+    &:active, &.flat {
+        background-image: none !important;
+    }
+    &:active, &.flat {
+        @extend .no-bs;
+        &:after {
+            content: none;
+        }
+    }
+    &.flat {
+        text-shadow: none;
+        cursor: default;
+    }
+    &.mini {
+        @extend %bold !optional;
+        font-size: emOf(12,15);
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+    &.gray {
+        text-shadow: none;
+    }
+    &.icon-forward {
+        &:before {
+            content: none !important;
+        }
+        &:after {
+            content: icon('forward');
+        }
+
+    }
+}
+//Causes ie 9 and 10 to have issues
+//button:active:after, .btn:active:after {
+//    box-shadow: inset 0 0 10px #000;
+//}
+.buttons {
+    @extend .c;
+    @extend .fr;
+    @extend .tr;
+    @extend .mb;
+    & > button, > .btn {
+        float: left;
+        margin: 0 3px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+form .buttons {
+    margin-left: $space/2;
+    margin-right: $space/2;
+}
+@-webkit-keyframes stripes {
+    from {
+        background-position: $input-height 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+@keyframes stripes {
+    from {
+        background-position: $input-height 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}

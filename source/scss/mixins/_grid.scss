@@ -1,0 +1,97 @@
+
+@mixin retina() {
+    @media only screen {
+        @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}
+@mixin large($force: false) {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+@mixin desktop($force: false) {
+    @media (min-width: 980px){
+        @content;
+    }
+}
+@mixin tablet() {
+    @media (max-width: 979px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 979px){
+        @content;
+    }
+}
+@mixin mobile($force: false) {
+    @media (max-width: 767px){
+        @content;
+    }
+}
+@mixin affix() {
+    @media (min-height:700px) and (min-width: 768px){
+        @content;
+    }
+}
+@mixin print() {
+    @media only print {
+        @content;
+    }
+}
+
+@mixin calc($property, $value, $gridSpace: $space) {
+    #{$property}: $value;
+    #{$property}: unquote("-webkit-calc(")$value unquote("-")$gridSpace unquote(")");
+    #{$property}: unquote("calc(")$value unquote("-")$gridSpace unquote(")");
+}
+
+@mixin grid($name, $force){
+
+    $name: 'grid' !default;
+    $gridCount: 20;
+    %grid-template-#{$name} {
+        float: left;
+        @if $name != 'flush' {
+            margin: $space/2;
+        }
+    }
+    @while $gridCount>0 {
+        .#{$name}-#{$gridCount} {
+            @extend %grid-template-#{$name};
+            @if $name != 'flush' {
+                @include calc('width',$grid*$gridCount);
+            }
+            @else {
+                width: $grid*$gridCount;
+            }
+        }
+        $gridCount: $gridCount - 1
+    }
+    .#{$name}-full{
+        @extend .#{$name}-20;
+    }
+    .#{$name}-half {
+        @extend .#{$name}-10;
+    }
+    .#{$name}-third {
+        @extend %grid-template-#{$name};
+        @if $name != 'flush' {
+            @include calc(width,33.33%);
+        }
+        @else {
+            width: 33.33%;
+        }
+    }
+    .#{$name}-fourth {
+        @extend .#{$name}-5;
+    }
+    .#{$name}-fifth {
+        @extend .#{$name}-4;
+    }
+    .#{$name}-2col {
+        float: left;
+        @include calc('width',100%,240px);
+    }
+    .#{$name}-3col {
+        float: left;
+        @include calc('width',100%,235px*2);
+    }
+}

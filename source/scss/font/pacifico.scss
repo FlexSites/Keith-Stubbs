@@ -1,0 +1,8 @@
+
+/** Pacifico ICON FONT **/
+
+$fontName: 'Pacifico';
+$prefix: '.' !default;
+
+@import "../core/font";
+@include font($fontName);
