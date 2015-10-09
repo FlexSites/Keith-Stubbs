@@ -1,0 +1,32 @@
+//  BORDER RADIUS
+$border-radius: 5px !default;
+.r {
+    border-radius: $border-radius;
+}
+.rt {
+    border-radius: $border-radius $border-radius 0 0 !important;
+}
+.rr {
+    border-radius: 0 $border-radius $border-radius 0 !important;
+}
+.rb {
+    border-radius: 0 0 $border-radius $border-radius !important;
+}
+.rl {
+    border-radius: $border-radius 0 0 $border-radius !important;
+}
+.rtl {
+    border-radius: $border-radius 0 0 0 !important;
+}
+.rtr {
+    border-radius: 0 $border-radius 0 0 !important;
+}
+.rbl {
+    border-radius: 0 0 0 $border-radius !important;
+}
+.rbr {
+    border-radius: 0 0 $border-radius 0 !important;
+}
+.no-r {
+    border-radius: 0 !important;
+}

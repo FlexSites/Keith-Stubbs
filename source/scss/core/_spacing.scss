@@ -1,0 +1,42 @@
+/** SPACING **/
+
+
+$space: 10px !default;
+$spacingTypeMap: (
+  m : 'margin',
+  p : 'padding'
+);
+$directionMap: (
+  t : 'top',
+  r : 'right',
+  b : 'bottom',
+  l : 'left'
+);
+
+@each $typeAbbr, $type in $spacingTypeMap {
+  .#{$typeAbbr} {
+    #{$type}: $space;
+  }
+  @each $directionAbbr, $direction in $directionMap {
+    .#{$typeAbbr}#{$directionAbbr} {
+      #{$type}-#{$direction}: $space;
+    }
+    .no-#{$typeAbbr}#{$directionAbbr} {
+      #{$type}-#{$direction}: 0 !important;
+    }
+  }
+
+  @for $times from 2 through 3 {
+    .#{$typeAbbr}#{$times}x {
+      #{$type}: $space*$times;
+    }
+    @each $directionAbbr, $direction in $directionMap {
+      .#{$typeAbbr}#{$directionAbbr}#{$times}x {
+        #{$type}-#{$direction}: $space*$times;
+      }
+    }
+  }
+  .no-#{$typeAbbr} {
+    #{$type}: 0 !important;
+  }
+}

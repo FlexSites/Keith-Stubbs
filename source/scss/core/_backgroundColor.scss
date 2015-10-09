@@ -1,0 +1,45 @@
+/* Background Gradient */
+
+$prefix: '%' !default;
+@include gradient("red", #DF0404 ,#bb0000);
+
+/* Background Color */
+@each $color in $allColors {
+    $name: nth($color, 1);
+    @include background-color(lt#{$name},nth($color, 3));
+    @include background-color($name,nth($color, 2));
+    @include background-color(dk#{$name},nth($color, 4));
+}
+ 
+.grey, header nav, .locationBox a.btn {
+    background: #45484d;
+}
+.locationBox a.btn {
+    border-color: #222;
+}
+.green, header nav a:hover, header #locations a[href="/west-valley"], mark.wvc, .event.west-valley:after, .westValleyAddress a.btn{
+    background: #3eae01;
+}
+.purple, header #locations a[href="/ogden"], mark.ogden, .event.ogden:after, .ogdenAddress a.btn {
+    background: #cd0187;
+}
+.purple.btn, button.purple {
+    border-color: #de1298;
+}
+.purple.btn:hover, button.purple:hover {
+
+    background-color: #ef23a9;
+}
+.orange, header #locations a[href="/trolley-square"], mark.trolley, .event.trolley-square:after, .trolleyAddress a.btn  {
+    background: #ff6100;
+}
+.orange.btn, button.orange {
+    border-color: #f90;
+}
+@include gradient("black", #000000, #666666);
+@include gradient("yellow", #fcc84e, #eda600);
+@include gradient("white", #ebebeb, #fafafa);
+@include gradient("gray", #dedede, #bdbdbd);
+@include gradient("blue", #2859a6, $color-blue);
+@include gradient("orange", #f90, #c60);
+@include gradient("green", $ltGreen, $color-green);

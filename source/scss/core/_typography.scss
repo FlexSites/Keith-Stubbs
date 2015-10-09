@@ -1,0 +1,126 @@
+
+// Typography
+
+$serif-font-family: 'serif' !default;
+$sanserif-font-family: Arial, sans-serif !default;
+$base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light" !default;
+$header-font-family: "Helvetica Neue", Helvetica, $base-font-family, $sanserif-font-family !default;
+$link-color: $color-blue !default;
+$base-font-size: 16px !default;
+$vertical-block: 32px !default;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  cursor: default;
+  font-weight: normal;
+  line-height: 1;
+}
+%subHeading {
+  margin-top: 0 !important;
+}
+@for $i from 1 through 5 {
+  h#{$i} {
+    + {
+      @for $l from $i through ($i + 1) {
+        @if $l < 6 {
+          h#{$l + 1} {
+            @extend %subHeading;
+          }
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: em($base-font-size * 2.3);
+  margin-top: $space/2;
+}
+h2 {
+  font-size: em($base-font-size * 1.7);
+}
+h3 {
+  font-size: em($base-font-size * 1.4);
+}
+h4 {
+  font-size: em($base-font-size * 1.2);
+}
+h5 {
+  font-size: em($base-font-size * 1.15);
+}
+h6 {
+  font-size: em($base-font-size);
+}
+// Links
+%defaultLinkStyle {
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+}
+a {
+  @extend %defaultLinkStyle;
+  &:visited {
+      @extend %defaultLinkStyle;
+  }
+  &:hover {
+      color: lighten($link-color,15%);
+  }
+  &:focus {
+      outline: thin dotted;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+b, strong {
+  @extend .bold;
+}
+small {
+  font-size: .75em;
+}
+
+// Blockquotes
+blockquote {
+  @extend .grid-full;
+  position: relative;
+  padding: 1em 2em;
+  &:before, &:after {
+    font-size: em($vertical-block*2);
+    position: absolute;
+    line-height: emOf($vertical-block,$vertical-block*2);
+  }
+  &:before {
+    content: "\201c";
+    top: emOf(14,64);
+    left: 0;
+  }
+  &:after {
+    content: "\201d";
+    bottom: emOf(14,64);
+    right: 0;
+  }
+}
+
+// Alignment Classes
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+.tc {
+  text-align: center;
+}
+.tj {
+  text-align: justify;
+}
+.ts {
+  text-shadow: em(1) em(1) em(1) rgba(0,0,0,0.5);
+}
+.no-ts {
+  text-shadow: none !important;
+}
+.code, .code textarea {
+  font-family: monospace !important;
+}

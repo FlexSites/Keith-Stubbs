@@ -1,0 +1,49 @@
+// Colors
+
+$color-prefix: '%' !default;
+$color-primary: #000 !default;
+$color-secondary: #777 !default;
+
+$color-blue: #14468a !default;
+$color-blue-dark: #06295A !default;
+$color-blue-light: #688FC4 !default;
+
+$color-orange: #ff6100 !default;
+$color-orange-dark: #A66300 !default;
+$color-orange-light: #FFB240 !default;
+
+$color-white: #fff !default;
+
+$color-gray-light: darken($color-white,6%) !default;
+$color-gray: darken($color-white,10%) !default;
+$color-gray-dark: darken($color-white,20%) !default;
+
+$color-black-light: darken($color-white,60%) !default;
+$color-black: darken($color-white,87%) !default;
+$color-black-dark: darken($color-white,100%) !default;
+
+$color-yellow: #FACB2D !default;
+$color-yellow: #EDA600 !default;
+$color-yellow-light: #F6BF3E !default;
+$color-yellow-dark: #9A6C00 !default;
+
+$color-red: #b00 !default;
+$color-red-light: #DD6363 !default;
+$color-red-dark: #7A0000 !default;
+
+$color-green: #3eae01 !default;
+$color-green-light: #A7E667 !default;
+$color-green-dark: #438500 !default;
+
+$color-purple: #cd0187 !default;
+
+$color-allColors:
+"blue" $color-blue $color-blue-light $color-blue-dark,
+"red" $color-red $color-red-light $color-red-dark,
+"orange" $color-orange $color-orange-light $color-orange-dark,
+"purple" $color-purple lighten($color-purple,10%) darken($color-purple,10%),
+"black" $color-black $color-black-light $color-black-dark,
+"yellow" $color-yellow $color-yellow-light $color-yellow-dark,
+"green" $color-green $color-green-light $color-green-dark,
+"white" $color-white $color-white $color-gray-light,
+"gray" $color-gray $color-gray-light $color-gray-dark;

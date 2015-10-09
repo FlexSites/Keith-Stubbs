@@ -1,0 +1,47 @@
+/** GRID **/
+
+@import "variables/grid";
+@import "../mixins/grid";
+
+.full-bar {
+    float: left;
+    width: 100%;
+    padding: 5px calc(50% - 490px);
+}
+
+//Grid
+@include grid('grid',true);
+
+//Flush
+@include grid('flush',true);
+
+//Large
+@include large(true) {
+    .no-large {
+        display: none !important;
+    }
+    @include grid('large',true);
+}
+
+//Desktop
+@include desktop(true) {
+    .no-desktop {
+        display: none !important;
+    }
+}
+
+//Tablet
+@include tablet() {
+    .no-tablet {
+        display: none !important;
+    }
+    @include grid('tablet',true);
+}
+
+//Mobile
+@include mobile(true) {
+    .no-mobile {
+        display: none !important;
+    }
+    @include grid('mobile',true);
+}

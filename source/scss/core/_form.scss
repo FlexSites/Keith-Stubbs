@@ -1,0 +1,36 @@
+label {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  float: left;
+  width: calc(100% - $space);
+  > span {
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+input, select, textarea {
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: solid #fff 1px;
+  display: block;
+  width: 100%;
+  outline: 0;
+  height: 36px;
+  background-color: #fff;
+  &:focus {
+    border-color: $color-primary;
+  }
+  &[disabled], &[readonly] {
+    background-color: #e6e6e6;
+  }
+}
+textarea {
+  height: auto;
+}

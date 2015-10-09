@@ -7,12 +7,12 @@
 $border-radius: 3px;
 
 // Core modules
-@import "/www/global/scss/core/base";
-@import "/www/global/scss/core/helper";
-@import "/www/global/scss/core/grid";
-@import "/www/global/scss/core/form";
-@import "/www/global/scss/core/spacing";
-@import "/www/global/scss/core/typography";
+@import "core/base";
+@import "core/helper";
+@import "core/grid";
+@import "core/form";
+@import "core/spacing";
+@import "core/typography";
 
 // Custom styles
 @import "template";

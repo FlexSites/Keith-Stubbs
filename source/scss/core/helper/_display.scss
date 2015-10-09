@@ -1,0 +1,17 @@
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: inherit !important;
+}
+.visible {
+    opacity: 1;
+}
+.invisible {
+    opacity: 0;
+}

@@ -1,0 +1,237 @@
+/** MISC **/
+
+$space: 10px !default;
+.flexslider {
+    @extend .invisible;
+}
+
+/* Product Cell Styles */
+.product {
+    position: relative;
+    padding: $space/2;
+    float: left;
+    &.sale, &.clearance {
+        &:before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-repeat: no-repeat;
+            background-image: url(//static.rcwilley.com/images/template/productResults.png);
+        }
+    }
+    &.clearance {
+        &:before {
+            background-position: -50px 0;
+        }
+    }
+}
+
+div.content {
+    padding: $space/2;
+}
+img.header {
+    @extend .bs, .c, .r, .grid-full;
+}
+.price {
+    line-height: 1em;
+    height: 1em;
+    &.strike {
+        @extend %ltblack-text;
+        > b, > span {
+            text-decoration: line-through;
+        }
+
+    }
+    &.sale {
+        @extend %red-text;
+    }
+    &.cent {
+        > b {
+            &:after {
+                content: "\00A2";
+                font-size: 0.75em;
+                vertical-align: text-top;
+                font-size: 0.6em;
+                line-height: 1.5em;
+            }
+            &:before {
+                content: none;
+            }
+        }
+    }
+    b:before {
+        content: "$";
+        font-weight: normal !important;
+    }
+    &.free b:before {
+        content: "";
+    }
+    &.discount{
+        color: $dkGreen;
+    }
+    &.discount b:before {
+        content: "-$";
+    }
+    span, b, b:before {
+        display: inline-block !important;
+    }
+    span, b:before {
+        vertical-align: text-top;
+        font-size: 0.6em;
+        line-height: 1.5em;
+        text-transform: lowercase;
+    }
+}
+
+.sidekick {
+    @extend .grid-9;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 210px;
+    > a, img {
+        display: block;
+        width: 100%;
+    }
+}
+
+//In a frame
+html {
+    &.iframe {
+        background: none !important;
+        > body {
+            padding: 0;
+        }
+        #header, #footer, #disclaimers, .sideBar, h1 {
+            display: none !important;
+        }
+        .grid-2col, grid-3col, tablet-2col, tablet-3col{
+            @extend .grid-full;
+        }
+    }
+}
+//TODO: Remove in 2014
+.trans {
+    background-image: url(//static.rcwilley.com/images/template/transparent.gif);
+}
+.pixel {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    display: none;
+}
+
+
+//See More
+.more {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &.show {
+        > ul {
+            max-height: 9999px !important;
+            > li {
+                margin-bottom: 5px !important;
+            }
+        }
+    }
+    h2 {
+        float: left;
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .seeMore {
+        @extend .a;
+        position: relative;
+        float: right;
+        margin-right: 5px;
+        right: -100%;
+        &.show {
+            right: 0;
+            display: block;
+        }
+    }
+    > ul {
+        @include transition(1s);
+        width: 100%;
+        float: left;
+        padding: 0;
+        overflow: hidden;
+        > li {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+//Cards
+.card {
+    @extend .zoom, .bs, .p, .r;
+    background: #fff;
+    position: relative;
+    &:hover {
+        box-shadow: 0 2px 4px 2px rgba(0,0,0,0.2);
+    }
+}
+
+//Faux Bar
+.fauxBar {
+    @extend .flush-full;
+    position: relative;
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    &:before {
+        left: -100%;
+    }
+    &:after {
+        right: -100%;
+    }
+}
+
+//Text Links
+@for $i from 1 through 10 {
+    .textLinksColor-#{$i}, .textLinksColor-#{$i}:before, .textLinksColor-#{$i}:after {
+        @include randomColors($i, 10);
+    }
+}
+.textLinks {
+    @extend .a250;
+    position: relative;
+    height: em(48);
+    &:before, &:after {
+        @extend .a250;
+    }
+    > a {
+        @extend .a250;
+        color: $color-white;
+        font-size: em(24);
+        position: absolute;
+        top: 100%;
+        display: block;
+        width: 100%;
+        z-index: -1;
+        text-align: center;
+        opacity: 0;
+        height: 48px;
+        line-height: 48px;
+        overflow: hidden;
+        &.active {
+            opacity: 1;
+            top: 0;
+            z-index: 1;
+        }
+
+    }
+}

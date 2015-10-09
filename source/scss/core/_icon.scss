@@ -1,0 +1,36 @@
+
+@mixin iconStyles {
+    font-family: $fontName;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+}
+%icon {
+    &:before {
+        @include iconStyles;
+        margin-right: 0.5em;
+    }
+}
+%iconAfter {
+    &:after {
+        @include iconStyles;
+        margin-left: 0.5em;
+    }
+}
+
+@mixin icons($icons) {
+    @each $icon, $content in $icons {
+        #{$prefix}icon-#{nth($icon, 1)} {
+            @extend %icon;
+            &:before {
+                content: $content !important;
+            }
+        }
+    }
+}

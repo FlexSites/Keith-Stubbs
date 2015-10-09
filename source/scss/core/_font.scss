@@ -1,0 +1,13 @@
+
+@mixin font($name){
+    @font-face {
+        font-family: $name;
+        src: url(//localcdn.flexsites.io/font/comedicon/#{$name}.eot);
+        src: url(//localcdn.flexsites.io/font/comedicon/#{$name}.eot?#iefix) format(embedded-opentype),
+             url(//localcdn.flexsites.io/font/comedicon/#{$name}.woff) format(woff), 
+             url(//localcdn.flexsites.io/font/comedicon/#{$name}.ttf) format(truetype),
+             url(//localcdn.flexsites.io/font/comedicon/#{$name}.svg##{$name}) format(svg);
+        font-weight: normal;
+        font-style: normal;
+    }
+}

@@ -1,0 +1,21 @@
+//  ANIMATION/TRANSITION
+@import "../../mixins/animation";
+.a {
+    @include transition(500ms)
+}
+.a250 {
+    @include transition(250ms)
+}
+.a100 {
+    @include transition(100ms)
+}
+
+.zoom {
+    @extend .a250;
+    &:hover {
+        -webkit-transform: scale(1.025, 1.025);
+        -moz-transform: scale(1.025, 1.025);
+        transform: scale(1.025, 1.025);
+        z-index: 998;
+    }
+}

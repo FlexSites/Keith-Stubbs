@@ -1,0 +1,25 @@
+.tl {
+    text-align: left;
+}
+.tr {
+    text-align: right;
+}
+.tc {
+    text-align: center;
+}
+.tj {
+    text-align: justify;
+}
+.ellipsis {
+    //Needs width specified to work
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.underline {
+    border-bottom: solid 2px;
+    line-height: 1.5em;
+}
+.strike {
+    text-decoration: line-through !important;
+}

@@ -1,0 +1,53 @@
+.disabled {
+    position: relative;
+    cursor: default;
+    color: #999 !important;
+    a{
+        color: #999 !important;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        height: 100%;
+        background: rgb(255,255,255);
+        opacity: 0.1;
+    }
+}
+.scroll {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+.no-b {
+    border: 0;
+}
+
+.noDrag {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -ms-user-select: none;
+    user-select:none;
+    draggable:none;
+}
+.h:hover {
+    opacity: 0.9;
+}
+.loading {
+    min-height: 32px;
+    min-width: 32px;
+    background: url(//static.rcwilley.com/images/template/loading.gif) center no-repeat;
+    * {
+        opacity: 0;
+    }
+}
+
+.printOnly {
+    display: none;
+    opacity: 0;
+}

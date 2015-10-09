@@ -1,0 +1,32 @@
+// Float / Clear
+.fl {
+    float: left !important;
+}
+.fr {
+    float: right !important;
+}
+.no-f {
+    float: none !important;
+}
+.cl {
+    clear: left !important;
+}
+.cr {
+    clear: right !important;
+}
+.c {
+    clear: both !important;
+}
+.clear {
+    @extend .c;
+}
+.no-c {
+    clear: none !important;
+}
+.clearfix {
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}

@@ -1,0 +1,18 @@
+
+$prefix: '%' !default;
+@media print {
+    body {
+        padding-top: 0;
+    }
+    #mainContent {
+        width: 100%;
+    }
+    .hideOnPrint {
+        visibility: collapse !important;
+        display: none !important;
+    }
+    .printOnly {
+        display: inherit;
+        opacity: 1;
+    }
+}
