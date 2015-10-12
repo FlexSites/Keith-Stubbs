@@ -6,7 +6,7 @@ $(function(){
 
   $('#contact-form').on('submit', function(){
     var valid = true
-      , form = ['name','phone','email','body','type'].reduce(function(prev, curr){
+      , form = ['name','phone','email','body'].reduce(function(prev, curr){
       var $el = $('#'+curr)
         , val = $.trim($el.val());
       if(($el.attr('type') === 'email' && !isEmail.test(val)) || ($el.prop('required') && !val.length)){
