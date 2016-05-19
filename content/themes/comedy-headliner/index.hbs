@@ -1,0 +1,115 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<!-- keithstubbs.com v1.2.0 -->
+
+<div class="hero full-bar"{{#if @blog.cover}} style="background-image: url({{@blog.cover}}"{{/if}}>
+  <div class="hero_keith">
+    <img src="{{asset "media/home/keith3.gif"}}">
+  </div>
+  <div class="hero_content">
+    <h1 class="hero_heading ts">{{@blog.title}}</h1>
+    <h2 class="hero_subheading ts">{{{@blog.description}}}</h2>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>
+          We would recommend you to any other business or professional group as a great entertainer and a true professional.
+        </blockquote>
+        <cite>  -Event Planner, <b>Sears Corporate Headquarters</b></cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          I&#39;m glad it was you up there and not me.  Great job man
+        </blockquote>
+        <cite>  -Karl Malone, <b>Utah Jazz and NBA Hall of Famer</b></cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          You were a tremendous hit and exceeded our expectations. Everyone enjoyed your comedy, style and interaction with the audience. It is that personal touch that separates you from other performers.
+        </blockquote>
+        <cite>  -Hallmark Corporation, <b>Kansas City, Mo</b></cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          I had no idea how a comedian would work with our group, as it was our first time. Keith far exceeded my expectations, as he was a huge hit with the audience.
+        </blockquote>
+        <cite>  -Direct Mortgage, <b>Orange County</b></cite>
+      </div>
+    </div>
+
+    <!--<h3 class="textWhite" style="font-size: 44px; text-transform: uppercase; font-family: 'Fjalla One'; text-align: center; opacity: 0.4;">&#8220;Patent Pending&#8221;</h3>-->
+
+    <!--<div class="fr cr" style="margin-right: 90px; margin-top: 20px;">
+    <iframe src="http://www.spreaker.com/embed/player/standard?autoplay=false&amp;show_id=814881" style="width: 300px; height: 131px; min-width: 400px;" frameborder="0" scrolling="no"></iframe>
+    </div>-->
+    <!--<a class="twitter-timeline" href="https://twitter.com/thekeithstubbs" data-widget-id="323664543693803520">Tweets by @thekeithstubbs</a>-->
+    <!-- <h3 style="color: #fff;">Keith Stubbs is a nationally touring comedian and award winning radio host</h3> -->
+    <h3 class="hero_cta">Wanna find out more?</h3>
+    <a href="/contact" class="btn green contact-link fl hero_button">Contact Keith</a>
+  </div>
+</div>
+
+<!-- <div class="full-bar">
+  <div class="slideshow">
+    <img src="/media/awards/uba-409f65678a.jpg">
+    <img src="/media/awards/city-weekly-9287b6230b.jpg">
+    <img src="/media/awards/standard-examiner-35629b04d0.jpg">
+    <img src="/media/awards/governors-gala-d919fd195a.jpg">
+  </div>
+  <div class="fr pl2x" style="width: 600px; border-left: solid 2px #ccc;">
+    <h3>Opening act for:</h3>
+    <table id="workedWith">
+      <tr>
+        <td>Joan Rivers</td>
+        <td>Jim Gaffigan</td>
+        <td>Rob Schneider</td>
+      </tr>
+      <tr>
+        <td>Jeff Foxworthy</td>
+        <td>Bill Engvall</td>
+        <td>Gilbert Gottfried</td>
+      </tr>
+      <tr>
+        <td>Bernie Mac</td>
+        <td>Frank Caliendo</td>
+        <td>Sinbad</td>
+      </tr>
+      <tr>
+        <td>Marc Maron</td>
+        <td>Lewis Black</td>
+        <td>Trace Adkins</td>
+      </tr>
+      <tr>
+        <td>Salt-n-Pepa</td>
+        <td>Little Big Town</td>
+        <td>Gladys Knight</td>
+      </tr>
+    </table>
+  </div>
+</div> -->
+
+{{! The big featured header }}
+<!--<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {{/if}}
+    </nav>
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">{{@blog.title}}</h1>
+            <h2 class="page-description">{{@blog.description}}</h2>
+        </div>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>-->
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>
