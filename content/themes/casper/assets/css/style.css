@@ -425,312 +425,312 @@ a.bs:active {
   width: -webkit-calc( 100% - 470px );
   width: calc( 100% - 470px ); }
 
-@media (min-width: 1200px) {
-  .no-large {
-    display: none !important; }
-  .large-20, .large-full, .large-19, .large-18, .large-17, .large-16, .large-15, .large-14, .large-13, .large-12, .large-11, .large-10, .large-half, .large-9, .large-8, .large-7, .large-6, .large-5, .large-fourth, .large-4, .large-fifth, .large-3, .large-2, .large-1, .large-third {
-    float: left;
-    margin: 7.5px; }
-  .large-20, .large-full {
-    width: 100%;
-    width: -webkit-calc( 100% - 15px );
-    width: calc( 100% - 15px ); }
-  .large-19 {
-    width: 95%;
-    width: -webkit-calc( 95% - 15px );
-    width: calc( 95% - 15px ); }
-  .large-18 {
-    width: 90%;
-    width: -webkit-calc( 90% - 15px );
-    width: calc( 90% - 15px ); }
-  .large-17 {
-    width: 85%;
-    width: -webkit-calc( 85% - 15px );
-    width: calc( 85% - 15px ); }
-  .large-16 {
-    width: 80%;
-    width: -webkit-calc( 80% - 15px );
-    width: calc( 80% - 15px ); }
-  .large-15 {
-    width: 75%;
-    width: -webkit-calc( 75% - 15px );
-    width: calc( 75% - 15px ); }
-  .large-14 {
-    width: 70%;
-    width: -webkit-calc( 70% - 15px );
-    width: calc( 70% - 15px ); }
-  .large-13 {
-    width: 65%;
-    width: -webkit-calc( 65% - 15px );
-    width: calc( 65% - 15px ); }
-  .large-12 {
-    width: 60%;
-    width: -webkit-calc( 60% - 15px );
-    width: calc( 60% - 15px ); }
-  .large-11 {
-    width: 55%;
-    width: -webkit-calc( 55% - 15px );
-    width: calc( 55% - 15px ); }
-  .large-10, .large-half {
-    width: 50%;
-    width: -webkit-calc( 50% - 15px );
-    width: calc( 50% - 15px ); }
-  .large-9 {
-    width: 45%;
-    width: -webkit-calc( 45% - 15px );
-    width: calc( 45% - 15px ); }
-  .large-8 {
-    width: 40%;
-    width: -webkit-calc( 40% - 15px );
-    width: calc( 40% - 15px ); }
-  .large-7 {
-    width: 35%;
-    width: -webkit-calc( 35% - 15px );
-    width: calc( 35% - 15px ); }
-  .large-6 {
-    width: 30%;
-    width: -webkit-calc( 30% - 15px );
-    width: calc( 30% - 15px ); }
-  .large-5, .large-fourth {
-    width: 25%;
-    width: -webkit-calc( 25% - 15px );
-    width: calc( 25% - 15px ); }
-  .large-4, .large-fifth {
-    width: 20%;
-    width: -webkit-calc( 20% - 15px );
-    width: calc( 20% - 15px ); }
-  .large-3 {
-    width: 15%;
-    width: -webkit-calc( 15% - 15px );
-    width: calc( 15% - 15px ); }
-  .large-2 {
-    width: 10%;
-    width: -webkit-calc( 10% - 15px );
-    width: calc( 10% - 15px ); }
-  .large-1 {
-    width: 5%;
-    width: -webkit-calc( 5% - 15px );
-    width: calc( 5% - 15px ); }
-  .large-third {
-    width: 33.33%;
-    width: -webkit-calc( 33.33% - 15px );
-    width: calc( 33.33% - 15px ); }
-  .large-2col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 240px );
-    width: calc( 100% - 240px ); }
-  .large-3col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 470px );
-    width: calc( 100% - 470px ); } }
+// @media (min-width: 1200px) {
+//   .no-large {
+//     display: none !important; }
+//   .large-20, .large-full, .large-19, .large-18, .large-17, .large-16, .large-15, .large-14, .large-13, .large-12, .large-11, .large-10, .large-half, .large-9, .large-8, .large-7, .large-6, .large-5, .large-fourth, .large-4, .large-fifth, .large-3, .large-2, .large-1, .large-third {
+//     float: left;
+//     margin: 7.5px; }
+//   .large-20, .large-full {
+//     width: 100%;
+//     width: -webkit-calc( 100% - 15px );
+//     width: calc( 100% - 15px ); }
+//   .large-19 {
+//     width: 95%;
+//     width: -webkit-calc( 95% - 15px );
+//     width: calc( 95% - 15px ); }
+//   .large-18 {
+//     width: 90%;
+//     width: -webkit-calc( 90% - 15px );
+//     width: calc( 90% - 15px ); }
+//   .large-17 {
+//     width: 85%;
+//     width: -webkit-calc( 85% - 15px );
+//     width: calc( 85% - 15px ); }
+//   .large-16 {
+//     width: 80%;
+//     width: -webkit-calc( 80% - 15px );
+//     width: calc( 80% - 15px ); }
+//   .large-15 {
+//     width: 75%;
+//     width: -webkit-calc( 75% - 15px );
+//     width: calc( 75% - 15px ); }
+//   .large-14 {
+//     width: 70%;
+//     width: -webkit-calc( 70% - 15px );
+//     width: calc( 70% - 15px ); }
+//   .large-13 {
+//     width: 65%;
+//     width: -webkit-calc( 65% - 15px );
+//     width: calc( 65% - 15px ); }
+//   .large-12 {
+//     width: 60%;
+//     width: -webkit-calc( 60% - 15px );
+//     width: calc( 60% - 15px ); }
+//   .large-11 {
+//     width: 55%;
+//     width: -webkit-calc( 55% - 15px );
+//     width: calc( 55% - 15px ); }
+//   .large-10, .large-half {
+//     width: 50%;
+//     width: -webkit-calc( 50% - 15px );
+//     width: calc( 50% - 15px ); }
+//   .large-9 {
+//     width: 45%;
+//     width: -webkit-calc( 45% - 15px );
+//     width: calc( 45% - 15px ); }
+//   .large-8 {
+//     width: 40%;
+//     width: -webkit-calc( 40% - 15px );
+//     width: calc( 40% - 15px ); }
+//   .large-7 {
+//     width: 35%;
+//     width: -webkit-calc( 35% - 15px );
+//     width: calc( 35% - 15px ); }
+//   .large-6 {
+//     width: 30%;
+//     width: -webkit-calc( 30% - 15px );
+//     width: calc( 30% - 15px ); }
+//   .large-5, .large-fourth {
+//     width: 25%;
+//     width: -webkit-calc( 25% - 15px );
+//     width: calc( 25% - 15px ); }
+//   .large-4, .large-fifth {
+//     width: 20%;
+//     width: -webkit-calc( 20% - 15px );
+//     width: calc( 20% - 15px ); }
+//   .large-3 {
+//     width: 15%;
+//     width: -webkit-calc( 15% - 15px );
+//     width: calc( 15% - 15px ); }
+//   .large-2 {
+//     width: 10%;
+//     width: -webkit-calc( 10% - 15px );
+//     width: calc( 10% - 15px ); }
+//   .large-1 {
+//     width: 5%;
+//     width: -webkit-calc( 5% - 15px );
+//     width: calc( 5% - 15px ); }
+//   .large-third {
+//     width: 33.33%;
+//     width: -webkit-calc( 33.33% - 15px );
+//     width: calc( 33.33% - 15px ); }
+//   .large-2col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 240px );
+//     width: calc( 100% - 240px ); }
+//   .large-3col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 470px );
+//     width: calc( 100% - 470px ); } }
 
-@media (min-width: 980px) {
-  .no-desktop {
-    display: none !important; } }
+// @media (min-width: 980px) {
+//   .no-desktop {
+//     display: none !important; } }
 
-@media (max-width: 979px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 979px) {
-  .no-tablet {
-    display: none !important; }
-  .tablet-20, .tablet-full, .tablet-19, .tablet-18, .tablet-17, .tablet-16, .tablet-15, .tablet-14, .tablet-13, .tablet-12, .tablet-11, .tablet-10, .tablet-half, .tablet-9, .tablet-8, .tablet-7, .tablet-6, .tablet-5, .tablet-fourth, .tablet-4, .tablet-fifth, .tablet-3, .tablet-2, .tablet-1, .tablet-third {
-    float: left;
-    margin: 7.5px; }
-  .tablet-20, .tablet-full {
-    width: 100%;
-    width: -webkit-calc( 100% - 15px );
-    width: calc( 100% - 15px ); }
-  .tablet-19 {
-    width: 95%;
-    width: -webkit-calc( 95% - 15px );
-    width: calc( 95% - 15px ); }
-  .tablet-18 {
-    width: 90%;
-    width: -webkit-calc( 90% - 15px );
-    width: calc( 90% - 15px ); }
-  .tablet-17 {
-    width: 85%;
-    width: -webkit-calc( 85% - 15px );
-    width: calc( 85% - 15px ); }
-  .tablet-16 {
-    width: 80%;
-    width: -webkit-calc( 80% - 15px );
-    width: calc( 80% - 15px ); }
-  .tablet-15 {
-    width: 75%;
-    width: -webkit-calc( 75% - 15px );
-    width: calc( 75% - 15px ); }
-  .tablet-14 {
-    width: 70%;
-    width: -webkit-calc( 70% - 15px );
-    width: calc( 70% - 15px ); }
-  .tablet-13 {
-    width: 65%;
-    width: -webkit-calc( 65% - 15px );
-    width: calc( 65% - 15px ); }
-  .tablet-12 {
-    width: 60%;
-    width: -webkit-calc( 60% - 15px );
-    width: calc( 60% - 15px ); }
-  .tablet-11 {
-    width: 55%;
-    width: -webkit-calc( 55% - 15px );
-    width: calc( 55% - 15px ); }
-  .tablet-10, .tablet-half {
-    width: 50%;
-    width: -webkit-calc( 50% - 15px );
-    width: calc( 50% - 15px ); }
-  .tablet-9 {
-    width: 45%;
-    width: -webkit-calc( 45% - 15px );
-    width: calc( 45% - 15px ); }
-  .tablet-8 {
-    width: 40%;
-    width: -webkit-calc( 40% - 15px );
-    width: calc( 40% - 15px ); }
-  .tablet-7 {
-    width: 35%;
-    width: -webkit-calc( 35% - 15px );
-    width: calc( 35% - 15px ); }
-  .tablet-6 {
-    width: 30%;
-    width: -webkit-calc( 30% - 15px );
-    width: calc( 30% - 15px ); }
-  .tablet-5, .tablet-fourth {
-    width: 25%;
-    width: -webkit-calc( 25% - 15px );
-    width: calc( 25% - 15px ); }
-  .tablet-4, .tablet-fifth {
-    width: 20%;
-    width: -webkit-calc( 20% - 15px );
-    width: calc( 20% - 15px ); }
-  .tablet-3 {
-    width: 15%;
-    width: -webkit-calc( 15% - 15px );
-    width: calc( 15% - 15px ); }
-  .tablet-2 {
-    width: 10%;
-    width: -webkit-calc( 10% - 15px );
-    width: calc( 10% - 15px ); }
-  .tablet-1 {
-    width: 5%;
-    width: -webkit-calc( 5% - 15px );
-    width: calc( 5% - 15px ); }
-  .tablet-third {
-    width: 33.33%;
-    width: -webkit-calc( 33.33% - 15px );
-    width: calc( 33.33% - 15px ); }
-  .tablet-2col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 240px );
-    width: calc( 100% - 240px ); }
-  .tablet-3col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 470px );
-    width: calc( 100% - 470px ); } }
+// @media (max-width: 979px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 979px) {
+//   .no-tablet {
+//     display: none !important; }
+//   .tablet-20, .tablet-full, .tablet-19, .tablet-18, .tablet-17, .tablet-16, .tablet-15, .tablet-14, .tablet-13, .tablet-12, .tablet-11, .tablet-10, .tablet-half, .tablet-9, .tablet-8, .tablet-7, .tablet-6, .tablet-5, .tablet-fourth, .tablet-4, .tablet-fifth, .tablet-3, .tablet-2, .tablet-1, .tablet-third {
+//     float: left;
+//     margin: 7.5px; }
+//   .tablet-20, .tablet-full {
+//     width: 100%;
+//     width: -webkit-calc( 100% - 15px );
+//     width: calc( 100% - 15px ); }
+//   .tablet-19 {
+//     width: 95%;
+//     width: -webkit-calc( 95% - 15px );
+//     width: calc( 95% - 15px ); }
+//   .tablet-18 {
+//     width: 90%;
+//     width: -webkit-calc( 90% - 15px );
+//     width: calc( 90% - 15px ); }
+//   .tablet-17 {
+//     width: 85%;
+//     width: -webkit-calc( 85% - 15px );
+//     width: calc( 85% - 15px ); }
+//   .tablet-16 {
+//     width: 80%;
+//     width: -webkit-calc( 80% - 15px );
+//     width: calc( 80% - 15px ); }
+//   .tablet-15 {
+//     width: 75%;
+//     width: -webkit-calc( 75% - 15px );
+//     width: calc( 75% - 15px ); }
+//   .tablet-14 {
+//     width: 70%;
+//     width: -webkit-calc( 70% - 15px );
+//     width: calc( 70% - 15px ); }
+//   .tablet-13 {
+//     width: 65%;
+//     width: -webkit-calc( 65% - 15px );
+//     width: calc( 65% - 15px ); }
+//   .tablet-12 {
+//     width: 60%;
+//     width: -webkit-calc( 60% - 15px );
+//     width: calc( 60% - 15px ); }
+//   .tablet-11 {
+//     width: 55%;
+//     width: -webkit-calc( 55% - 15px );
+//     width: calc( 55% - 15px ); }
+//   .tablet-10, .tablet-half {
+//     width: 50%;
+//     width: -webkit-calc( 50% - 15px );
+//     width: calc( 50% - 15px ); }
+//   .tablet-9 {
+//     width: 45%;
+//     width: -webkit-calc( 45% - 15px );
+//     width: calc( 45% - 15px ); }
+//   .tablet-8 {
+//     width: 40%;
+//     width: -webkit-calc( 40% - 15px );
+//     width: calc( 40% - 15px ); }
+//   .tablet-7 {
+//     width: 35%;
+//     width: -webkit-calc( 35% - 15px );
+//     width: calc( 35% - 15px ); }
+//   .tablet-6 {
+//     width: 30%;
+//     width: -webkit-calc( 30% - 15px );
+//     width: calc( 30% - 15px ); }
+//   .tablet-5, .tablet-fourth {
+//     width: 25%;
+//     width: -webkit-calc( 25% - 15px );
+//     width: calc( 25% - 15px ); }
+//   .tablet-4, .tablet-fifth {
+//     width: 20%;
+//     width: -webkit-calc( 20% - 15px );
+//     width: calc( 20% - 15px ); }
+//   .tablet-3 {
+//     width: 15%;
+//     width: -webkit-calc( 15% - 15px );
+//     width: calc( 15% - 15px ); }
+//   .tablet-2 {
+//     width: 10%;
+//     width: -webkit-calc( 10% - 15px );
+//     width: calc( 10% - 15px ); }
+//   .tablet-1 {
+//     width: 5%;
+//     width: -webkit-calc( 5% - 15px );
+//     width: calc( 5% - 15px ); }
+//   .tablet-third {
+//     width: 33.33%;
+//     width: -webkit-calc( 33.33% - 15px );
+//     width: calc( 33.33% - 15px ); }
+//   .tablet-2col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 240px );
+//     width: calc( 100% - 240px ); }
+//   .tablet-3col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 470px );
+//     width: calc( 100% - 470px ); } }
 
-@media (max-width: 767px) {
-  .no-mobile {
-    display: none !important; }
-  .mobile-20, .mobile-full, .mobile-19, .mobile-18, .mobile-17, .mobile-16, .mobile-15, .mobile-14, .mobile-13, .mobile-12, .mobile-11, .mobile-10, .mobile-half, .mobile-9, .mobile-8, .mobile-7, .mobile-6, .mobile-5, .mobile-fourth, .mobile-4, .mobile-fifth, .mobile-3, .mobile-2, .mobile-1, .mobile-third {
-    float: left;
-    margin: 7.5px; }
-  .mobile-20, .mobile-full {
-    width: 100%;
-    width: -webkit-calc( 100% - 15px );
-    width: calc( 100% - 15px ); }
-  .mobile-19 {
-    width: 95%;
-    width: -webkit-calc( 95% - 15px );
-    width: calc( 95% - 15px ); }
-  .mobile-18 {
-    width: 90%;
-    width: -webkit-calc( 90% - 15px );
-    width: calc( 90% - 15px ); }
-  .mobile-17 {
-    width: 85%;
-    width: -webkit-calc( 85% - 15px );
-    width: calc( 85% - 15px ); }
-  .mobile-16 {
-    width: 80%;
-    width: -webkit-calc( 80% - 15px );
-    width: calc( 80% - 15px ); }
-  .mobile-15 {
-    width: 75%;
-    width: -webkit-calc( 75% - 15px );
-    width: calc( 75% - 15px ); }
-  .mobile-14 {
-    width: 70%;
-    width: -webkit-calc( 70% - 15px );
-    width: calc( 70% - 15px ); }
-  .mobile-13 {
-    width: 65%;
-    width: -webkit-calc( 65% - 15px );
-    width: calc( 65% - 15px ); }
-  .mobile-12 {
-    width: 60%;
-    width: -webkit-calc( 60% - 15px );
-    width: calc( 60% - 15px ); }
-  .mobile-11 {
-    width: 55%;
-    width: -webkit-calc( 55% - 15px );
-    width: calc( 55% - 15px ); }
-  .mobile-10, .mobile-half {
-    width: 50%;
-    width: -webkit-calc( 50% - 15px );
-    width: calc( 50% - 15px ); }
-  .mobile-9 {
-    width: 45%;
-    width: -webkit-calc( 45% - 15px );
-    width: calc( 45% - 15px ); }
-  .mobile-8 {
-    width: 40%;
-    width: -webkit-calc( 40% - 15px );
-    width: calc( 40% - 15px ); }
-  .mobile-7 {
-    width: 35%;
-    width: -webkit-calc( 35% - 15px );
-    width: calc( 35% - 15px ); }
-  .mobile-6 {
-    width: 30%;
-    width: -webkit-calc( 30% - 15px );
-    width: calc( 30% - 15px ); }
-  .mobile-5, .mobile-fourth {
-    width: 25%;
-    width: -webkit-calc( 25% - 15px );
-    width: calc( 25% - 15px ); }
-  .mobile-4, .mobile-fifth {
-    width: 20%;
-    width: -webkit-calc( 20% - 15px );
-    width: calc( 20% - 15px ); }
-  .mobile-3 {
-    width: 15%;
-    width: -webkit-calc( 15% - 15px );
-    width: calc( 15% - 15px ); }
-  .mobile-2 {
-    width: 10%;
-    width: -webkit-calc( 10% - 15px );
-    width: calc( 10% - 15px ); }
-  .mobile-1 {
-    width: 5%;
-    width: -webkit-calc( 5% - 15px );
-    width: calc( 5% - 15px ); }
-  .mobile-third {
-    width: 33.33%;
-    width: -webkit-calc( 33.33% - 15px );
-    width: calc( 33.33% - 15px ); }
-  .mobile-2col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 240px );
-    width: calc( 100% - 240px ); }
-  .mobile-3col {
-    float: left;
-    width: 100%;
-    width: -webkit-calc( 100% - 470px );
-    width: calc( 100% - 470px ); } }
+// @media (max-width: 767px) {
+//   .no-mobile {
+//     display: none !important; }
+//   .mobile-20, .mobile-full, .mobile-19, .mobile-18, .mobile-17, .mobile-16, .mobile-15, .mobile-14, .mobile-13, .mobile-12, .mobile-11, .mobile-10, .mobile-half, .mobile-9, .mobile-8, .mobile-7, .mobile-6, .mobile-5, .mobile-fourth, .mobile-4, .mobile-fifth, .mobile-3, .mobile-2, .mobile-1, .mobile-third {
+//     float: left;
+//     margin: 7.5px; }
+//   .mobile-20, .mobile-full {
+//     width: 100%;
+//     width: -webkit-calc( 100% - 15px );
+//     width: calc( 100% - 15px ); }
+//   .mobile-19 {
+//     width: 95%;
+//     width: -webkit-calc( 95% - 15px );
+//     width: calc( 95% - 15px ); }
+//   .mobile-18 {
+//     width: 90%;
+//     width: -webkit-calc( 90% - 15px );
+//     width: calc( 90% - 15px ); }
+//   .mobile-17 {
+//     width: 85%;
+//     width: -webkit-calc( 85% - 15px );
+//     width: calc( 85% - 15px ); }
+//   .mobile-16 {
+//     width: 80%;
+//     width: -webkit-calc( 80% - 15px );
+//     width: calc( 80% - 15px ); }
+//   .mobile-15 {
+//     width: 75%;
+//     width: -webkit-calc( 75% - 15px );
+//     width: calc( 75% - 15px ); }
+//   .mobile-14 {
+//     width: 70%;
+//     width: -webkit-calc( 70% - 15px );
+//     width: calc( 70% - 15px ); }
+//   .mobile-13 {
+//     width: 65%;
+//     width: -webkit-calc( 65% - 15px );
+//     width: calc( 65% - 15px ); }
+//   .mobile-12 {
+//     width: 60%;
+//     width: -webkit-calc( 60% - 15px );
+//     width: calc( 60% - 15px ); }
+//   .mobile-11 {
+//     width: 55%;
+//     width: -webkit-calc( 55% - 15px );
+//     width: calc( 55% - 15px ); }
+//   .mobile-10, .mobile-half {
+//     width: 50%;
+//     width: -webkit-calc( 50% - 15px );
+//     width: calc( 50% - 15px ); }
+//   .mobile-9 {
+//     width: 45%;
+//     width: -webkit-calc( 45% - 15px );
+//     width: calc( 45% - 15px ); }
+//   .mobile-8 {
+//     width: 40%;
+//     width: -webkit-calc( 40% - 15px );
+//     width: calc( 40% - 15px ); }
+//   .mobile-7 {
+//     width: 35%;
+//     width: -webkit-calc( 35% - 15px );
+//     width: calc( 35% - 15px ); }
+//   .mobile-6 {
+//     width: 30%;
+//     width: -webkit-calc( 30% - 15px );
+//     width: calc( 30% - 15px ); }
+//   .mobile-5, .mobile-fourth {
+//     width: 25%;
+//     width: -webkit-calc( 25% - 15px );
+//     width: calc( 25% - 15px ); }
+//   .mobile-4, .mobile-fifth {
+//     width: 20%;
+//     width: -webkit-calc( 20% - 15px );
+//     width: calc( 20% - 15px ); }
+//   .mobile-3 {
+//     width: 15%;
+//     width: -webkit-calc( 15% - 15px );
+//     width: calc( 15% - 15px ); }
+//   .mobile-2 {
+//     width: 10%;
+//     width: -webkit-calc( 10% - 15px );
+//     width: calc( 10% - 15px ); }
+//   .mobile-1 {
+//     width: 5%;
+//     width: -webkit-calc( 5% - 15px );
+//     width: calc( 5% - 15px ); }
+//   .mobile-third {
+//     width: 33.33%;
+//     width: -webkit-calc( 33.33% - 15px );
+//     width: calc( 33.33% - 15px ); }
+//   .mobile-2col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 240px );
+//     width: calc( 100% - 240px ); }
+//   .mobile-3col {
+//     float: left;
+//     width: 100%;
+//     width: -webkit-calc( 100% - 470px );
+//     width: calc( 100% - 470px ); } }
 
 label {
   position: relative;
@@ -1049,22 +1049,22 @@ blockquote {
 #messageForm h2 {
   font-size: 25px; }
 
-@media (max-width: 767px) {
-  body {
-    margin-top: 48px !important; }
-  .header {
-    padding-top: 0;
-    height: 48px; }
-    .header_logo, .header_social {
-      display: none; }
-    .header_nav a, .header_nav:after {
-      display: none; }
-    .header_nav a:first-child {
-      display: block;
-      line-height: 48px;
-      padding: 0 15px; }
-      .header_nav a:first-child i:before {
-        margin-right: 0; } }
+// @media (max-width: 767px) {
+//   body {
+//     margin-top: 48px !important; }
+//   .header {
+//     padding-top: 0;
+//     height: 48px; }
+//     .header_logo, .header_social {
+//       display: none; }
+//     .header_nav a, .header_nav:after {
+//       display: none; }
+//     .header_nav a:first-child {
+//       display: block;
+//       line-height: 48px;
+//       padding: 0 15px; }
+//       .header_nav a:first-child i:before {
+//         margin-right: 0; } }
 
 .fl {
   float: left; }
@@ -1238,60 +1238,60 @@ blockquote {
   line-height: 1.4em;
   text-align: center; }
 
-@media (max-width: 767px) {
-  .hero {
-    text-align: right;
-    height: 320px;
-    position: relative;
-    margin-top: 0;
-    height: 100%; }
-    .hero_keith {
-      width: 70%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin-left: -10%;
-      height: 100%; }
-      .hero_keith > img {
-        width: 100%; }
-    .hero_heading {
-      font-size: 44px;
-      margin-right: 10px; }
-    .hero_subheading {
-      margin-right: 10px;
-      margin-bottom: 0; }
-      .hero_subheading span {
-        display: none; }
-        .hero_subheading span:first-child {
-          display: block; }
-    .hero_cta {
-      display: none; }
-    .hero_button {
-      width: calc(100% - 30px);
-      margin: 15px;
-      left: 0;
-      bottom: 0; }
-    .hero_content {
-      width: 100%;
-      height: 300px; }
-  .footer {
-    display: none; }
-  .testimonial > blockquote {
-    margin-top: 0;
-    font-size: 100%;
-    font-weight: bold; }
-    .testimonial > blockquote:before {
-      content: "“";
-      position: static;
-      top: auto;
-      left: auto; }
-    .testimonial > blockquote:after {
-      content: "”";
-      position: static; }
-  .testimonial > cite {
-    font-size: 12px;
-    float: right;
-    margin-right: 60px; } }
+// @media (max-width: 767px) {
+//   .hero {
+//     text-align: right;
+//     height: 320px;
+//     position: relative;
+//     margin-top: 0;
+//     height: 100%; }
+//     .hero_keith {
+//       width: 70%;
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       margin-left: -10%;
+//       height: 100%; }
+//       .hero_keith > img {
+//         width: 100%; }
+//     .hero_heading {
+//       font-size: 44px;
+//       margin-right: 10px; }
+//     .hero_subheading {
+//       margin-right: 10px;
+//       margin-bottom: 0; }
+//       .hero_subheading span {
+//         display: none; }
+//         .hero_subheading span:first-child {
+//           display: block; }
+//     .hero_cta {
+//       display: none; }
+//     .hero_button {
+//       width: calc(100% - 30px);
+//       margin: 15px;
+//       left: 0;
+//       bottom: 0; }
+//     .hero_content {
+//       width: 100%;
+//       height: 300px; }
+//   .footer {
+//     display: none; }
+//   .testimonial > blockquote {
+//     margin-top: 0;
+//     font-size: 100%;
+//     font-weight: bold; }
+//     .testimonial > blockquote:before {
+//       content: "“";
+//       position: static;
+//       top: auto;
+//       left: auto; }
+//     .testimonial > blockquote:after {
+//       content: "”";
+//       position: static; }
+//   .testimonial > cite {
+//     font-size: 12px;
+//     float: right;
+//     margin-right: 60px; } }
 
 #messageForm {
   background-color: #e8e8e8;
