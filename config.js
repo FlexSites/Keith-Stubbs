@@ -135,7 +135,16 @@ if (POSTGRES_URL) {
     // Configure your URL and mail settings here
     config.production = {
         url: 'http://www.keithstubbs.com',
-        mail: {},
+       mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: process.env.MAILGUN_SMTP_LOGIN,
+                    pass: process.env.MAILGUN_SMTP_PASSWORD,
+                },
+            }
+        },
         storage: {
             active: 'ghost-s3',
             'ghost-s3': {
