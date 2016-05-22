@@ -36,18 +36,6 @@
                 </section>
 
                 <footer class="post-footer">
-
-                {{! Everything inside the #author tags pulls data from the author }}
-                {{#author}}
-                    <section class="author">
-                        <div class="author-meta">
-                            {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                            {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-                        </div>
-                    </section>
-
-                {{/author}}
-
                     <section class="share">
                         <h4 style="color: #666; margin-bottom: 0;">Share this post</h4>
                         <a class="fa fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
